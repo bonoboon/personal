@@ -1,0 +1,567 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@font-face {
+    font-family: 'KNPSKkomi-Regular00';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.grid {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 100px;
+    @include responsive(pc-screens) {
+        margin-bottom: 150px;
+    }
+    img {
+        width: 100%;
+    }
+
+    div.header-img {
+        @include responsive(pc-screens) {
+            display: none;
+        }
+    }
+
+    div.header-img-pc {
+        display: none;
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
+
+    div.header-flex-box {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        padding: 0 15px;
+        line-height: 50px;
+        background-color: rgba($color: $white, $alpha: 0.2);
+        @include responsive(pc-screens) {
+            padding: 0 30px;
+        }
+
+        div.logo {
+            display: none;
+            width: 65%;
+            padding-top: 3px;
+            @include responsive(pc-screens) {
+                display: block;
+            }
+
+            img {
+                width: auto;
+            }
+        }
+        
+        div.git {
+            padding-top: 8px;
+            @include responsive(pc-screens) {
+                display: none;
+            }
+        }
+
+        div.git-pc {
+            display: none;
+            @include responsive(pc-screens) {
+                display: block;
+                position: fixed;
+                right: 50px;
+                bottom: 35px;
+                z-index: 100;
+            }
+        }
+
+        div.mobile-menu {
+            padding-top: 15px;
+            @include responsive(pc-screens) {
+                display: none;
+            }
+            span {
+                width: 25px;
+                height: 2px;
+                background-color: #ffffff;
+                &:nth-child(2) {
+                    margin: 7px 0;
+                }
+            }
+        }
+
+        nav {
+            display: none;
+            width: 30%;
+            @include responsive(pc-screens) {
+                display: block;
+            }
+            ul.gnb {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                li {
+                    a {
+                        font-size: 18px;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    div.bubble-mobile {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%);
+        @include responsive(pc-screens) {
+            display: none;
+        }
+    }
+
+    div.bubble1 {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
+
+    div.bubble2 {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
+
+    div.bubble3 {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
+
+    div.whale {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 65%;
+        transform: translate(-50%, -50%);
+        @include responsive(pc-screens) {
+            width: 50%;
+        }
+        img {
+            margin: 0 auto;
+            @include responsive(pc-screens) {
+                width: 45%;
+            }
+        }
+    }
+
+    div.logo-big {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        @include responsive(pc-screens) {
+            display: none;
+        }
+    }
+
+    div.logo-big-pc {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
+
+
+}
+
+main {
+    position: relative;
+    margin-bottom: 100px;
+    @include responsive(pc-screens) {
+        margin-bottom: 150px;
+    }
+    section {
+        h2 {
+            padding-left: 15px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid $color-border;
+            background: url(../images/title_back.png) no-repeat 0 10px;
+        }
+        
+        h3 {
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 24px;
+        }
+    }
+
+    section.about-me {
+        margin-bottom: 60px;
+        div.me-flex-box {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            div.me-des {
+                width: 60%;
+                @include responsive(pc-screens) {
+                    width: 50%;
+                }
+            }
+
+            div.face {
+                width: 40%;
+                @include responsive(pc-screens) {
+                    display: none;
+                }
+            }
+
+            div.face-pc {
+                display: none;
+                width: 30%;
+                @include responsive(pc-screens) {
+                   display: block;
+                }
+
+                img {
+                    width: 100%;
+                }
+            } 
+        }
+    }
+
+    section.skill {
+        margin-bottom: 150px;
+        @include responsive(pc-screens) {
+            margin-bottom: 50px;
+        }
+
+
+        div.skill-flex-box {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column-reverse;
+            width: 100%;
+            @include responsive(pc-screens) {
+                flex-direction: row;
+            }
+            div.web {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                width: 100%;
+                @include responsive(pc-screens) {
+                    width: 50%;
+                }
+                div {
+                    position: relative;
+                    width: 200px;
+                    height: 200px;
+                    margin-bottom: 40px;
+                    span.outer-circle {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                        background-color: #c1c1c1;
+                    }
+                    img.wave {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                    span.inner-circle {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 50%;
+                        box-shadow: 0 0 15px;
+                        background-color: $white;
+                    }
+
+                    img.icon {
+                        position: absolute;
+                        top: 50px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+
+        div.adobe {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            @include responsive(pc-screens) {
+                width: 50%;
+            }
+            div {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                margin-bottom: 40px;
+                &:nth-child(3),
+                &:last-child {
+                    @include responsive(pc-screens) {
+                        margin-top: -225px;
+                    }
+                }
+                span.outer-circle {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    background-color: #c1c1c1;
+                }
+                img.wave {
+                    position: absolute;
+                    bottom: 0;
+                }
+                span.inner-circle {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 15px;
+                    background-color: $white;
+                }
+                img.icon {
+                    position: absolute;
+                    top: 50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    section.portfolio {
+        @include responsive(pc-screens) {
+            margin-bottom: 200px;
+        }
+        a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: $white;
+            background-color: $a-color;
+            &:hover {
+                font-weight: 600;
+                color: $a-color;
+                background-color: #f2f2f2;
+            }
+        }
+
+        div.portfolio {
+            width: 100%;
+            margin-bottom: 40px;
+            @include responsive(pc-screens) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            div.portfolio-img {
+                width: 570px;
+                height: 250px;
+                margin: 0 auto 35px;
+                background-color: #f6ffeb;
+                @include responsive(pc-screens) {
+                    width: 670px;
+                    height: 400px;
+                }
+            }
+            div.portfolio-des {
+                text-align: center;
+                @include responsive(pc-screens) {
+                    width: 40%;
+                }
+            }
+        }
+    }
+
+    section.video {
+        width: 100%;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: $white;
+            background-color: $a-color;
+            &:hover {
+                font-weight: 600;
+                color: $a-color;
+                background-color: #f4f4f4;
+            }
+        }
+
+        div.video-img {
+            width: 570px;
+            height: 250px;
+            margin: 0 auto 35px;
+            background-color: #f6ffeb;
+            @include responsive(pc-screens) {
+                width: 670px;
+                height: 400px;
+            }
+        }
+    }
+    
+    div.main-bubble {
+        display: none;
+        @include responsive(pc-screens) {
+            display: block;
+        }
+
+        div.main-bubble1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        div.main-bubble2 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    
+        div.main-bubble3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    
+        div.main-bubble4 {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    
+        div.main-bubble5 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+footer {
+    position: relative;
+    margin: 0 auto;
+    img {
+        width: 100%;
+    }
+
+    div.footer-img {
+        @include responsive(pc-screens) {
+            display: none;
+        }
+    }
+
+    div.footer-img-pc {
+        display: none;
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
+
+    div.footer-logo {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include responsive(pc-screens) {
+            display: none;
+        }
+    }
+
+    div.footer-logo-pc {
+        display: none;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
+
+    div.phone-mail {
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        left: 50%;
+        bottom: 35px;
+        width: 100%;
+        text-align: center;
+        transform: translateX(-50%);
+        @include responsive(pc-screens) {
+            width: 50%;
+        }
+
+        div {
+            @include responsive(pc-screens) {
+                width: 50%;
+            }
+
+            p {
+                color: $white;
+                @include responsive(pc-screens) {
+                    font-size: 24px;
+                }
+
+                span {
+                    display: inline-block;
+                    font-size: 16px;
+                    @include responsive(pc-screens) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

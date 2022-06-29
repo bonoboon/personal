@@ -1,0 +1,795 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #474747;
+  font: 16px 'KNPSKkomi-Regular00';
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+img {
+  display: block;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+span {
+  display: block;
+}
+
+header,
+nav,
+main,
+aside,
+article,
+section,
+footer {
+  display: block;
+}
+
+@font-face {
+  font-family: 'KNPSKkomi-Regular00';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.grid {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    margin-bottom: 150px;
+  }
+}
+
+header img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  header div.header-img {
+    display: none;
+  }
+}
+
+header div.header-img-pc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  header div.header-img-pc {
+    display: block;
+  }
+}
+
+header div.header-flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  line-height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box {
+    padding: 0 30px;
+  }
+}
+
+header div.header-flex-box div.logo {
+  display: none;
+  width: 65%;
+  padding-top: 3px;
+}
+
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box div.logo {
+    display: block;
+  }
+}
+
+header div.header-flex-box div.logo img {
+  width: auto;
+}
+
+header div.header-flex-box div.git {
+  padding-top: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box div.git {
+    display: none;
+  }
+}
+
+header div.header-flex-box div.git-pc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box div.git-pc {
+    display: block;
+    position: fixed;
+    right: 50px;
+    bottom: 35px;
+    z-index: 100;
+  }
+}
+
+header div.header-flex-box div.mobile-menu {
+  padding-top: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box div.mobile-menu {
+    display: none;
+  }
+}
+
+header div.header-flex-box div.mobile-menu span {
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+header div.header-flex-box div.mobile-menu span:nth-child(2) {
+  margin: 7px 0;
+}
+
+header div.header-flex-box nav {
+  display: none;
+  width: 30%;
+}
+
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box nav {
+    display: block;
+  }
+}
+
+header div.header-flex-box nav ul.gnb {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header div.header-flex-box nav ul.gnb li a {
+  font-size: 18px;
+  color: white;
+}
+
+header div.bubble-mobile {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+  header div.bubble-mobile {
+    display: none;
+  }
+}
+
+header div.bubble1 {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  header div.bubble1 {
+    display: block;
+  }
+}
+
+header div.bubble2 {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+  header div.bubble2 {
+    display: block;
+  }
+}
+
+header div.bubble3 {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  header div.bubble3 {
+    display: block;
+  }
+}
+
+header div.whale {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1024px) {
+  header div.whale {
+    width: 50%;
+  }
+}
+
+header div.whale img {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  header div.whale img {
+    width: 45%;
+  }
+}
+
+header div.logo-big {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1024px) {
+  header div.logo-big {
+    display: none;
+  }
+}
+
+header div.logo-big-pc {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1024px) {
+  header div.logo-big-pc {
+    display: block;
+  }
+}
+
+main {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    margin-bottom: 150px;
+  }
+}
+
+main section h2 {
+  padding-left: 15px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #606060;
+  background: url(../images/title_back.png) no-repeat 0 10px;
+}
+
+main section h3 {
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+main section p {
+  font-size: 24px;
+}
+
+main section.about-me {
+  margin-bottom: 60px;
+}
+
+main section.about-me div.me-flex-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.about-me div.me-flex-box div.me-des {
+  width: 60%;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.about-me div.me-flex-box div.me-des {
+    width: 50%;
+  }
+}
+
+main section.about-me div.me-flex-box div.face {
+  width: 40%;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.about-me div.me-flex-box div.face {
+    display: none;
+  }
+}
+
+main section.about-me div.me-flex-box div.face-pc {
+  display: none;
+  width: 30%;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.about-me div.me-flex-box div.face-pc {
+    display: block;
+  }
+}
+
+main section.about-me div.me-flex-box div.face-pc img {
+  width: 100%;
+}
+
+main section.skill {
+  margin-bottom: 150px;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.skill {
+    margin-bottom: 50px;
+  }
+}
+
+main section.skill div.skill-flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.skill div.skill-flex-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+main section.skill div.skill-flex-box div.web {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.skill div.skill-flex-box div.web {
+    width: 50%;
+  }
+}
+
+main section.skill div.skill-flex-box div.web div {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+}
+
+main section.skill div.skill-flex-box div.web div span.outer-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #c1c1c1;
+}
+
+main section.skill div.skill-flex-box div.web div img.wave {
+  position: absolute;
+  bottom: 0;
+}
+
+main section.skill div.skill-flex-box div.web div span.inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 15px;
+          box-shadow: 0 0 15px;
+  background-color: white;
+}
+
+main section.skill div.skill-flex-box div.web div img.icon {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main section.skill div.adobe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.skill div.adobe {
+    width: 50%;
+  }
+}
+
+main section.skill div.adobe div {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.skill div.adobe div:nth-child(3), main section.skill div.adobe div:last-child {
+    margin-top: -225px;
+  }
+}
+
+main section.skill div.adobe div span.outer-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #c1c1c1;
+}
+
+main section.skill div.adobe div img.wave {
+  position: absolute;
+  bottom: 0;
+}
+
+main section.skill div.adobe div span.inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 15px;
+          box-shadow: 0 0 15px;
+  background-color: white;
+}
+
+main section.skill div.adobe div img.icon {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+  main section.portfolio {
+    margin-bottom: 200px;
+  }
+}
+
+main section.portfolio a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: white;
+  background-color: #62adff;
+}
+
+main section.portfolio a:hover {
+  font-weight: 600;
+  color: #62adff;
+  background-color: #f2f2f2;
+}
+
+main section.portfolio div.portfolio {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.portfolio div.portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+main section.portfolio div.portfolio div.portfolio-img {
+  width: 570px;
+  height: 250px;
+  margin: 0 auto 35px;
+  background-color: #f6ffeb;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.portfolio div.portfolio div.portfolio-img {
+    width: 670px;
+    height: 400px;
+  }
+}
+
+main section.portfolio div.portfolio div.portfolio-des {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.portfolio div.portfolio div.portfolio-des {
+    width: 40%;
+  }
+}
+
+main section.video {
+  width: 100%;
+  text-align: center;
+}
+
+main section.video a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: white;
+  background-color: #62adff;
+}
+
+main section.video a:hover {
+  font-weight: 600;
+  color: #62adff;
+  background-color: #f4f4f4;
+}
+
+main section.video div.video-img {
+  width: 570px;
+  height: 250px;
+  margin: 0 auto 35px;
+  background-color: #f6ffeb;
+}
+
+@media screen and (min-width: 1024px) {
+  main section.video div.video-img {
+    width: 670px;
+    height: 400px;
+  }
+}
+
+main div.main-bubble {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  main div.main-bubble {
+    display: block;
+  }
+}
+
+main div.main-bubble div.main-bubble1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main div.main-bubble div.main-bubble2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main div.main-bubble div.main-bubble3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+main div.main-bubble div.main-bubble4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main div.main-bubble div.main-bubble5 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+footer {
+  position: relative;
+  margin: 0 auto;
+}
+
+footer img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  footer div.footer-img {
+    display: none;
+  }
+}
+
+footer div.footer-img-pc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  footer div.footer-img-pc {
+    display: block;
+  }
+}
+
+footer div.footer-logo {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+  footer div.footer-logo {
+    display: none;
+  }
+}
+
+footer div.footer-logo-pc {
+  display: none;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+  footer div.footer-logo-pc {
+    display: block;
+  }
+}
+
+footer div.phone-mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+  footer div.phone-mail {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer div.phone-mail div {
+    width: 50%;
+  }
+}
+
+footer div.phone-mail div p {
+  color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  footer div.phone-mail div p {
+    font-size: 24px;
+  }
+}
+
+footer div.phone-mail div p span {
+  display: inline-block;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  footer div.phone-mail div p span {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

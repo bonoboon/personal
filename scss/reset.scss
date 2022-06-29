@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: $color-base;
+    font: 16px 'KNPSKkomi-Regular00';
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+img {
+    display: block;
+}
+
+h2 {
+    font-size: 30px;  
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+span {
+    display: block;
+}
+
+header,
+nav,
+main,
+aside,
+article,
+section,
+footer {
+    display: block;
+}
