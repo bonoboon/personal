@@ -1,13 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   color: #474747;
-  font: 16px 'KNPSKkomi-Regular00';
+  font: 16px "KNPSKkomi-Regular00";
 }
 
 ol,
@@ -23,6 +22,12 @@ a {
 
 img {
   display: block;
+}
+
+h1 {
+  font-family: "ONE-Mobile-POP";
+  font-size: 60px;
+  color: #fff;
 }
 
 h2 {
@@ -52,19 +57,23 @@ footer {
 }
 
 @font-face {
-  font-family: 'KNPSKkomi-Regular00';
+  font-family: "KNPSKkomi-Regular00";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'CookieRun-Regular';
+  font-family: "CookieRun-Regular";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "ONE-Mobile-POP";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 @-webkit-keyframes wave {
   0% {
     margin-left: 0;
@@ -73,7 +82,6 @@ footer {
     margin-left: -3200px;
   }
 }
-
 @keyframes wave {
   0% {
     margin-left: 0;
@@ -82,157 +90,94 @@ footer {
     margin-left: -3200px;
   }
 }
-
 @-webkit-keyframes swell {
   0% {
-    -webkit-transform: translate3d(0, -25px, 0);
-            transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
   }
   50% {
-    -webkit-transform: translate3d(0, 5px, 0);
-            transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
   }
   100% {
-    -webkit-transform: translate3d(0, -25px, 0);
-            transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
   }
 }
-
 @keyframes swell {
   0% {
-    -webkit-transform: translate3d(0, -25px, 0);
-            transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
   }
   50% {
-    -webkit-transform: translate3d(0, 5px, 0);
-            transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
   }
   100% {
-    -webkit-transform: translate3d(0, -25px, 0);
-            transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
   }
 }
-
 @-webkit-keyframes fill {
   from {
     top: 200px;
-    -webkit-transform: translate(-50%) rotate(0deg);
-            transform: translate(-50%) rotate(0deg);
+    transform: translate(-50%) rotate(0deg);
   }
   to {
     top: 50px;
-    -webkit-transform: translate(-50%) rotate(360deg);
-            transform: translate(-50%) rotate(360deg);
+    transform: translate(-50%) rotate(360deg);
   }
 }
-
 @keyframes fill {
   from {
     top: 200px;
-    -webkit-transform: translate(-50%) rotate(0deg);
-            transform: translate(-50%) rotate(0deg);
+    transform: translate(-50%) rotate(0deg);
   }
   to {
     top: 50px;
-    -webkit-transform: translate(-50%) rotate(360deg);
-            transform: translate(-50%) rotate(360deg);
+    transform: translate(-50%) rotate(360deg);
   }
 }
-
-@-webkit-keyframes floatUL {
+@-webkit-keyframes animate {
   0% {
-    -webkit-transform: translateX(30%) translateY(-30%);
-            transform: translateX(30%) translateY(-30%);
-    opacity: 0.9;
-  }
-  50% {
-    -webkit-transform: translateY(-50%) translateX(50%);
-            transform: translateY(-50%) translateX(50%);
-    opacity: 0.8;
-  }
-  70% {
-    -webkit-transform: translateX(70%) translateY(-70%);
-            transform: translateX(70%) translateY(-70%);
-    opacity: 0.5;
-  }
-  100% {
-    -webkit-transform: translateY(-80%) translateX(100%);
-            transform: translateY(-80%) translateX(100%);
-    opacity: 0.0;
-  }
-}
-
-@keyframes floatUL {
-  0% {
-    -webkit-transform: translateX(30%) translateY(-30%);
-            transform: translateX(30%) translateY(-30%);
-    opacity: 0.9;
-  }
-  50% {
-    -webkit-transform: translateY(-50%) translateX(50%);
-            transform: translateY(-50%) translateX(50%);
-    opacity: 0.8;
-  }
-  70% {
-    -webkit-transform: translateX(70%) translateY(-70%);
-            transform: translateX(70%) translateY(-70%);
-    opacity: 0.5;
-  }
-  100% {
-    -webkit-transform: translateY(-80%) translateX(100%);
-            transform: translateY(-80%) translateX(100%);
-    opacity: 0.0;
-  }
-}
-
-@-webkit-keyframes float {
-  0% {
-    -webkit-transform: translateY(30px) rotate(60deg);
-            transform: translateY(30px) rotate(60deg);
+    transform: translate(-50, -50%);
     opacity: 1;
   }
-  50% {
-    -webkit-transform: translateY(-60px) rotate(160deg);
-            transform: translateY(-60px) rotate(160deg);
-    opacity: 0.8;
-  }
-  70% {
-    -webkit-transform: translateY(90px) rotate(260deg);
-            transform: translateY(90px) rotate(260deg);
-    opacity: 0.7;
-  }
-  100% {
-    -webkit-transform: translateY(-120px) rotate(360deg);
-            transform: translateY(-120px) rotate(360deg);
-    opacity: 0.3;
-    visibility: hidden;
-  }
-}
-
-@keyframes float {
   0% {
-    -webkit-transform: translateY(30px) rotate(60deg);
-            transform: translateY(30px) rotate(60deg);
+    transform: translate(-50, -1000%);
     opacity: 1;
   }
-  50% {
-    -webkit-transform: translateY(-60px) rotate(160deg);
-            transform: translateY(-60px) rotate(160deg);
-    opacity: 0.8;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50, -50%);
+    opacity: 1;
   }
-  70% {
-    -webkit-transform: translateY(90px) rotate(260deg);
-            transform: translateY(90px) rotate(260deg);
-    opacity: 0.7;
-  }
-  100% {
-    -webkit-transform: translateY(-120px) rotate(360deg);
-            transform: translateY(-120px) rotate(360deg);
-    opacity: 0.3;
-    visibility: hidden;
+  0% {
+    transform: translate(-50, -1000%);
+    opacity: 1;
   }
 }
-
+@-webkit-keyframes bubble {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-130000%);
+    opacity: 0;
+  }
+}
+@keyframes bubble {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-130000%);
+    opacity: 0;
+  }
+}
 .grid {
   position: relative;
   width: 100%;
@@ -245,17 +190,14 @@ header {
   position: relative;
   width: 100%;
   height: 100vh;
-  margin: 0 auto;
   overflow: hidden;
-  margin-bottom: 100px;
+  margin: 0 auto 100px;
 }
-
 @media screen and (min-width: 1024px) {
   header {
     margin-bottom: 0;
   }
 }
-
 header .ocean {
   position: absolute;
   width: 100%;
@@ -264,7 +206,6 @@ header .ocean {
   top: 0;
   background: #5190d5;
 }
-
 header .ocean .wave1 {
   background: url(../images/header_wave.svg) repeat-x;
   position: absolute;
@@ -273,10 +214,8 @@ header .ocean .wave1 {
   height: 180px;
   -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
           animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-
 header .ocean .wave2 {
   background: url(../images/header_wave2.svg) repeat-x;
   position: absolute;
@@ -285,21 +224,14 @@ header .ocean .wave2 {
   height: 180px;
   -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
           animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-
 header img {
   width: 100%;
 }
-
 header div.header-flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: absolute;
   top: 0;
   left: 0;
@@ -309,43 +241,35 @@ header div.header-flex-box {
   line-height: 50px;
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 @media screen and (min-width: 1024px) {
   header div.header-flex-box {
     padding: 0 30px;
   }
 }
-
 header div.header-flex-box div.logo {
   display: none;
   width: 65%;
   padding-top: 3px;
 }
-
 @media screen and (min-width: 1024px) {
   header div.header-flex-box div.logo {
     display: block;
   }
 }
-
 header div.header-flex-box div.logo img {
   width: auto;
 }
-
 header div.header-flex-box div.git {
   padding-top: 8px;
 }
-
 @media screen and (min-width: 1024px) {
   header div.header-flex-box div.git {
     display: none;
   }
 }
-
 header div.header-flex-box div#git-pc {
   opacity: 0;
 }
-
 @media screen and (min-width: 1024px) {
   header div.header-flex-box div#git-pc {
     position: fixed;
@@ -354,432 +278,250 @@ header div.header-flex-box div#git-pc {
     z-index: 100;
   }
 }
-
 header div.header-flex-box div.mobile-menu {
   padding-top: 15px;
 }
-
 @media screen and (min-width: 1024px) {
   header div.header-flex-box div.mobile-menu {
     display: none;
   }
 }
-
 header div.header-flex-box div.mobile-menu span {
   width: 25px;
   height: 2px;
   background-color: #ffffff;
 }
-
 header div.header-flex-box div.mobile-menu span:nth-child(2) {
   margin: 7px 0;
 }
-
 header div.header-flex-box nav {
   display: none;
   width: 30%;
 }
-
 @media screen and (min-width: 1024px) {
   header div.header-flex-box nav {
     display: block;
   }
 }
-
 header div.header-flex-box nav ul#gnb {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 header div.header-flex-box nav ul#gnb li a {
   font-size: 18px;
   color: white;
 }
-
-header div.bubble-mobile {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  width: 100%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-}
-
-@media screen and (min-width: 1024px) {
-  header div.bubble-mobile {
-    display: none;
-  }
-}
-
-header div.bubble1 {
-  display: none;
-  position: absolute;
-  top: 50px;
-  left: 0;
-}
-
-@media screen and (min-width: 1024px) {
-  header div.bubble1 {
-    display: block;
-  }
-}
-
-header div.bubble2 {
-  display: none;
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-@media screen and (min-width: 1024px) {
-  header div.bubble2 {
-    display: block;
-  }
-}
-
-header div.bubble3 {
-  display: none;
-  position: absolute;
-  top: 50px;
-  right: 0;
-}
-
-@media screen and (min-width: 1024px) {
-  header div.bubble3 {
-    display: block;
-  }
-}
-
 header div.whale {
   position: absolute;
   top: 30%;
   left: 50%;
   width: 65%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 @media screen and (min-width: 1024px) {
   header div.whale {
     width: 50%;
   }
 }
-
 header div.whale img {
   margin: 0 auto;
 }
-
 @media screen and (min-width: 1024px) {
   header div.whale img {
     width: 45%;
   }
 }
-
-header div.logo-big {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-@media screen and (min-width: 1024px) {
-  header div.logo-big {
-    display: none;
-  }
-}
-
-header div.logo-big-pc {
-  display: none;
+header div#logo-big {
   position: absolute;
   top: 30%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
-
 @media screen and (min-width: 1024px) {
-  header div.logo-big-pc {
-    display: block;
+  header div#logo-big h1 {
+    font-size: 80px;
   }
 }
-
-main {
-  position: relative;
-  margin-bottom: 100px;
+header div#logo-big .individual-bubble {
+  position: absolute;
+  border-radius: 100%;
+  bottom: 10px;
+  background-color: #fff;
+  z-index: 1;
 }
 
-main section {
+main#bubble {
+  display: flex;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+main#bubble span {
+  position: absolute;
+  bottom: -50px;
+  background: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: inset 0 0 10px #5fe1ff;
+  -webkit-animation: bubble 100s linear infinite;
+          animation: bubble 100s linear infinite;
+}
+main#bubble span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.25) translate(-70%, -70%);
+  background: radial-gradient(#fff, transparent);
+  border-radius: 50%;
+}
+main#bubble section {
   padding-top: 50px;
 }
-
-main section h2 {
+main#bubble section h2 {
   padding-left: 15px;
   margin-bottom: 50px;
   border-bottom: 1px solid #606060;
   background: url(../images/title_back.png) no-repeat 0 10px;
 }
-
-main section h3 {
+main#bubble section h3 {
   margin-bottom: 40px;
   font-weight: 500;
 }
-
-main section p {
+main#bubble section p {
   font-size: 24px;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#about-me {
+  main#bubble section#about-me {
     height: 100vh;
   }
 }
-
-main section#about-me div.me-flex-box {
+main#bubble section#about-me div.me-flex-box {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
-
-main section#about-me div.me-flex-box div.me-des {
+main#bubble section#about-me div.me-flex-box div.me-des {
   width: 60%;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#about-me div.me-flex-box div.me-des {
+  main#bubble section#about-me div.me-flex-box div.me-des {
     width: 50%;
   }
 }
-
-main section#about-me div.me-flex-box div.face {
+main#bubble section#about-me div.me-flex-box div.face {
   width: 40%;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#about-me div.me-flex-box div.face {
+  main#bubble section#about-me div.me-flex-box div.face {
     display: none;
   }
 }
-
-main section#about-me div.me-flex-box div.face-pc {
+main#bubble section#about-me div.me-flex-box div.face-pc {
   display: none;
   width: 30%;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#about-me div.me-flex-box div.face-pc {
+  main#bubble section#about-me div.me-flex-box div.face-pc {
     display: block;
   }
 }
-
-main section#about-me div.me-flex-box div.face-pc img {
+main#bubble section#about-me div.me-flex-box div.face-pc img {
   width: 100%;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#skill {
+  main#bubble section#skill {
     height: 100vh;
   }
 }
-
-main section#skill p {
+main#bubble section#skill div.skills {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+}
+main#bubble section#skill div.skills div.outer-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #c1c1c1;
+}
+main#bubble section#skill div.skills div.outer-circle::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(#628dff, #00c4ff);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20%;
+  -webkit-animation: fill 10s ease-in-out infinite;
+          animation: fill 10s ease-in-out infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+main#bubble section#skill div.skills div.inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px;
+  background-color: white;
+}
+main#bubble section#skill div.skills img.icon {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main#bubble section#skill p {
   position: absolute;
   left: 50%;
   bottom: 50px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  font-family: 'CookieRun-Regular';
+  transform: translateX(-50%);
+  font-family: "CookieRun-Regular";
   font-size: 24px;
   color: #886cff;
 }
-
-main section#skill div.skill-flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
+main#bubble section#skill div.skill-flex-box {
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  justify-content: space-around;
+  flex-direction: column-reverse;
   width: 100%;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#skill div.skill-flex-box {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  main#bubble section#skill div.skill-flex-box {
+    flex-direction: row;
   }
 }
-
-main section#skill div.skill-flex-box div.web {
-  display: -webkit-box;
-  display: -ms-flexbox;
+main#bubble section#skill div.skill-flex-box div.web,
+main#bubble section#skill div.skill-flex-box div.adobe {
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
   width: 100%;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#skill div.skill-flex-box div.web {
+  main#bubble section#skill div.skill-flex-box div.web,
+main#bubble section#skill div.skill-flex-box div.adobe {
     width: 50%;
   }
 }
-
-main section#skill div.skill-flex-box div.web div {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin-bottom: 40px;
-}
-
-main section#skill div.skill-flex-box div.web div span.outer-circle {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-  background-color: #c1c1c1;
-}
-
-main section#skill div.skill-flex-box div.web div span.outer-circle::before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#628dff), to(#00c4ff));
-  background: linear-gradient(#628dff, #00c4ff);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  border-radius: 20%;
-  -webkit-animation: fill 10s ease-in-out infinite;
-          animation: fill 10s ease-in-out infinite;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-main section#skill div.skill-flex-box div.web div span.inner-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 15px;
-          box-shadow: 0 0 15px;
-  background-color: white;
-}
-
-main section#skill div.skill-flex-box div.web div img.icon {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-main section#skill div.adobe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-}
-
 @media screen and (min-width: 1024px) {
-  main section#skill div.adobe {
-    width: 50%;
-  }
-}
-
-main section#skill div.adobe div {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin-bottom: 40px;
-}
-
-@media screen and (min-width: 1024px) {
-  main section#skill div.adobe div:nth-child(3), main section#skill div.adobe div:last-child {
+  main#bubble section#skill div.adobe div.skills:nth-child(3), main#bubble section#skill div.adobe div.skills:last-child {
     margin-top: -225px;
   }
 }
-
-main section#skill div.adobe div span.outer-circle {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-  background-color: #c1c1c1;
-}
-
-main section#skill div.adobe div span.outer-circle::before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#628dff), to(#00c4ff));
-  background: linear-gradient(#628dff, #00c4ff);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  border-radius: 20%;
-  -webkit-animation: fill 10s ease-in-out infinite;
-          animation: fill 10s ease-in-out infinite;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-main section#skill div.adobe div span.inner-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 15px;
-          box-shadow: 0 0 15px;
-  background-color: white;
-}
-
-main section#skill div.adobe div img.icon {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-main section#portfolio a {
+main#bubble section#portfolio a {
   display: inline-block;
   margin-right: 10px;
   padding: 10px 20px;
@@ -787,131 +529,64 @@ main section#portfolio a {
   color: white;
   background-color: #62adff;
 }
-
-main section#portfolio a:hover {
+main#bubble section#portfolio a:hover {
   font-weight: 600;
   color: #62adff;
   background-color: #f2f2f2;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#portfolio div.portfolio-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  main#bubble section#portfolio div.portfolio-flex {
     display: flex;
     overflow-x: hidden;
   }
 }
-
-main section#portfolio div.portfolio-flex div.portfolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
+main#bubble section#portfolio div.portfolio-flex div.portfolio {
   display: flex;
   width: 100%;
   margin-bottom: 40px;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#portfolio div.portfolio-flex div.portfolio {
+  main#bubble section#portfolio div.portfolio-flex div.portfolio {
     min-width: 100vw;
     min-height: 100vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     margin-bottom: 0;
   }
 }
-
-main section#portfolio div.portfolio-flex div.portfolio div.portfolio-img {
+main#bubble section#portfolio div.portfolio-flex div.portfolio div.portfolio-img {
   height: 250px;
   margin: 0 auto 35px;
   background-color: #f6ffeb;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#portfolio div.portfolio-flex div.portfolio div.portfolio-img {
+  main#bubble section#portfolio div.portfolio-flex div.portfolio div.portfolio-img {
     width: 670px;
     height: 400px;
     margin: 0;
   }
 }
-
-main section#portfolio div.portfolio-flex div.portfolio div.portfolio-des {
+main#bubble section#portfolio div.portfolio-flex div.portfolio div.portfolio-des {
   text-align: center;
 }
-
 @media screen and (min-width: 1024px) {
-  main section#portfolio div.portfolio-flex div.portfolio div.portfolio-des {
+  main#bubble section#portfolio div.portfolio-flex div.portfolio div.portfolio-des {
     width: 40%;
   }
 }
-
-main section.video {
+main#bubble section#video {
   width: 100%;
   text-align: center;
 }
-
 @media screen and (min-width: 1024px) {
-  main section.video {
+  main#bubble section#video {
     height: 100vh;
   }
 }
-
-main section.video video {
+main#bubble section#video video {
   width: 100%;
   margin: 0 auto 35px;
   background-color: #f6ffeb;
 }
-
-main div.bubble {
-  position: relative;
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  main div.bubble {
-    display: block;
-  }
-}
-
-main div.bubble span {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  pointer-events: none;
-  -webkit-box-shadow: 0 -3px 5px #fff inset, 0 -10px 25px #ddf1e4 inset, 0 2px 2px #ddf1e4 inset, 2px 0 5px #fff inset, -2px 0 5px #fff inset, 0 5px 25px #fff inset;
-          box-shadow: 0 -3px 5px #fff inset, 0 -10px 25px #ddf1e4 inset, 0 2px 2px #ddf1e4 inset, 2px 0 5px #fff inset, -2px 0 5px #fff inset, 0 5px 25px #fff inset;
-  -webkit-animation: animate 5s linear infinite;
-          animation: animate 5s linear infinite;
-}
-
-@-webkit-keyframes animate {
-  0% {
-    -webkit-transform: translate(-50, -50%);
-            transform: translate(-50, -50%);
-    opacity: 1;
-  }
-  0% {
-    -webkit-transform: translate(-50, -1000%);
-            transform: translate(-50, -1000%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate {
-  0% {
-    -webkit-transform: translate(-50, -50%);
-            transform: translate(-50, -50%);
-    opacity: 1;
-  }
-  0% {
-    -webkit-transform: translate(-50, -1000%);
-            transform: translate(-50, -1000%);
-    opacity: 1;
-  }
-}
-
 footer {
   position: relative;
   width: 100%;
@@ -920,7 +595,6 @@ footer {
   overflow: hidden;
   background-color: #fff;
 }
-
 footer .ocean {
   position: absolute;
   width: 100%;
@@ -929,13 +603,11 @@ footer .ocean {
   bottom: 0;
   background: #5190d5;
 }
-
 @media screen and (min-width: 1024px) {
   footer .ocean {
     height: 50vh;
   }
 }
-
 footer .ocean .wave {
   background: url(../images/footer_wave.svg) repeat-x;
   position: absolute;
@@ -944,80 +616,62 @@ footer .ocean .wave {
   height: 198px;
   -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
           animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-
 footer .ocean .wave:nth-of-type(2) {
   top: -190px;
   -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
           animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
   opacity: 0.5;
 }
-
 footer img {
   width: 100%;
 }
-
 footer div.footer-logo {
   position: absolute;
   bottom: 15%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 @media screen and (min-width: 1024px) {
   footer div.footer-logo {
     display: none;
   }
 }
-
 footer div.phone-mail {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   position: absolute;
   left: 50%;
   bottom: 35px;
   width: 100%;
   text-align: center;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 @media screen and (min-width: 1024px) {
   footer div.phone-mail {
     width: 50%;
   }
 }
-
 @media screen and (min-width: 1024px) {
   footer div.phone-mail div {
     width: 50%;
   }
 }
-
 footer div.phone-mail div p {
   color: white;
 }
-
 @media screen and (min-width: 1024px) {
   footer div.phone-mail div p {
     font-size: 24px;
   }
 }
-
 footer div.phone-mail div p span {
   display: inline-block;
   font-size: 16px;
 }
-
 @media screen and (min-width: 1024px) {
   footer div.phone-mail div p span {
     font-size: 20px;
   }
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
