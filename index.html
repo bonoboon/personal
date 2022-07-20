@@ -12,23 +12,27 @@
 <body>
     <header>
         <div class="ocean">
-            <div class="wave1"></div>
-            <div class="wave2"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
         </div>
         <div class="header-flex-box">
             <div class="logo">
-                <a href=""><img src="./images/logo.png" alt="logo"></a>
+                <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
             </div>
             <div class="git">
-                <a href=""><img src="./images/git.png" alt="git"></a>
+                <a href="https://github.com/bonoboon" target="_blank"><img src="./images/git.png" alt="git"></a>
             </div>
-            <div id="git-pc">
-                <a href=""><img src="./images/git_pc.png" alt="git_pc"></a>
+            <div id="slide-open">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div id="slide">
+                <ul>
+                    <li><a href="#about-me">ABOUT ME</a></li>
+                    <li><a href="#skill">SKILL</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                </ul>
             </div>
             <nav>
                 <ul id="gnb">
@@ -38,15 +42,23 @@
                 </ul>
             </nav>
         </div> <!-- header-flex-box -->
-        <div class="whale whale1">
-            <img src="./images/whale1.png" alt="whale1">
+        <!-- <div class="card"> -->
+        <div class="blue-ocean">
+            <div class="blue-whale-line1"></div>					
+            <div class="blue-whale">
+                <div class="blue-whale-main">
+                    <div class="blue-whale-eye"></div>
+                    <div class="gill-container"><div class="blue-whale-gill"></div></div>
+                    <div class="blue-whale-color"></div>
+                    <div class="blue-whale-color-bottom"></div>
+                </div>
+                <div class="blue-whale-backside"><div></div></div>
+                <div class="blue-whale-flipper">
+                </div>						
+            </div>
         </div>
-        <div class="whale whale2">
-            <img src="./images/whale2.png" alt="whale2">
-        </div>
-        <div class="whale whale3">
-            <img src="./images/whale3.png" alt="whale3">
-        </div>
+        <!-- </div> -->
+	</div>
         <div id="logo-big">
             <h1>
                 YERIN KIM<br>
@@ -63,10 +75,8 @@
                     <div class="me-des">
                         <h3>안녕하세요. 바다처럼 무한한 가능성을 가진 김예린입니다.</h3>
                         <p>
-                            좋아하는 일이라면 어떤 어려움이 생기더라도
-                            포기하지 않고 극복하기 위해 끝까지 노력합니다.
-                            친근한 성격과 뛰어난 적응력을 가지고 있어
-                            사람들과 잘 어울릴 수 있습니다.
+                            어떤 어려움이 있더라도 맡은 일에 책임감을 가지고 끝까지 해냅니다. 친근한 성격과 뛰어난 적응력으로
+                            사람들과 잘 어울릴 수 있습니다. 배우는 것을 좋아하고 새로운 도전을 두려워하지 않습니다.<br><br>
                         </p>
                     </div>
                     <div class="face">
@@ -82,37 +92,47 @@
                 <h2>SKILL</h2>
                 <div class="skill-flex-box">
                     <div class="web">
-                        <div class="html skills">
+                        <div class="skills" id="html">
                             <div class="outer-circle"></div>
                             <div class="inner-circle"></div>
                             <img src="./images/html.png" alt="html" class="icon">
                             <p class="count">90</p>
+                            <p class="hidden-title">HTML</p>
+                            <p class="hidden-text">시멘틱 태그를 적절한 쓰임새에 맞게 사용하며 웹 표준을 준수한 시멘틱 마크업을 작성합니다.</p>
                         </div>
-                        <div class="css skills">
+                        <div class="skills" id="css">
                             <div class="outer-circle"></div>
                             <div class="inner-circle"></div>
                             <img src="./images/css.png" alt="css" class="icon">
                             <p class="count">90</p>
+                            <p class="hidden-title">CSS</p>
+                            <p class="hidden-text">웹 표준 및 웹 접근성을 준수하여 반응형 레이아웃을 제작할 수 있습니다.</p>
                         </div>
-                        <div class="js skills">
+                        <div class="skills" id="js">
                             <div class="outer-circle"></div>
                             <div class="inner-circle"></div>
                             <img src="./images/js.png" alt="js" class="icon">
                             <p class="count">70</p>
+                            <p class="hidden-title">Javascript</p>
+                            <p class="hidden-text">자바스크립트를 활용한 다양한 애니메이션과 기능 구현이 가능하고, 자바스크립트에 대한 이해도가 높습니다.</p>
                         </div>
-                        <div class="jquery skills">
+                        <div class="skills" id="jquery">
                             <div class="outer-circle"></div>
                             <div class="inner-circle"></div>
                             <img src="./images/jquery.png" alt="jquery" class="icon">
                             <p class="count">70</p>
+                            <p class="hidden-title">jQuery</p>
+                            <p class="hidden-text">제이쿼리를 활용하여 다양한 애니메이션과 기능을 구현할 수 있습니다.</p>
                         </div>
-                        <div class="sass skills">
+                        <div class="skills" id="sass">
                             <div class="outer-circle"></div>
                             <div class="inner-circle"></div>
                             <img src="./images/sass.png" alt="sass" class="icon">
                             <p class="count">90</p>
+                            <p class="hidden-title">SASS</p>
+                            <p class="hidden-text">변수와 mixin을 적절히 사용하여 중복을 최소화하고 코드를 간결하게 작성할 수 있습니다.</p>
                         </div>
-                        <div class="react skills">
+                        <div class="skills" id="react">
                             <div class="outer-circle"></div>
                             <div class="inner-circle"></div>
                             <img src="./images/react.png" alt="react" class="icon">
@@ -120,67 +140,113 @@
                         </div>
                     </div> <!-- web -->
                     <div class="adobe">
-                        <div class="ps skills">
+                        <div class="skills" id="ps">
                             <div class="outer-circle"></div>
                             <div class="inner-circle"></div>
                             <img src="./images/ps.png" alt="ps" class="icon">
                             <p class="count">80</p>
+                            <p class="hidden-title">Photoshop</p>
+                            <p class="hidden-text">합성, 사진 편집 등의 2D 그래픽 작업을 비롯한 다양한 웹 페이지 제작을 위한 시안 작업이 가능합니다.</p>
                         </div>
-                        <div class="ai skills">
+                        <div class="skills" id="ai">
                             <div class="outer-circle"></div>
                             <div class="inner-circle"></div>
                             <img src="./images/ai.png" alt="ai" class="icon">
                             <p class="count">80</p>
+                            <p class="hidden-title">Illustrator</p>
+                            <p class="hidden-text">로고, 아이콘 제작 등 벡터 소스의 자유로운 제작과 편집이 가능하고 웹 페이지 제작을 위한 시안 작업이 가능합니다.</p>
                         </div>
-                        <div class="pr skills">
+                        <div class="skills" id="pr">
                             <div class="outer-circle"></div>
                             <div class="inner-circle"></div>
                             <img src="./images/pr.png" alt="pr" class="icon">
                             <p class="count">80</p>
+                            <p class="hidden-title">Premiere Pro</p>
+                            <p class="hidden-text">프리미어를 활용한 컷편집, 자막, 효과 등 기본적인 영상편집이 가능합니다.</p>
                         </div>
-                        <div class="ae skills">
+                        <div class="skills" id="ae">
                             <div class="outer-circle"></div>
                             <div class="inner-circle"></div>
                             <img src="./images/ae.png" alt="ae" class="icon">
                             <p class="count">60</p>
+                            <p class="hidden-title">After Effect</p>
+                            <p class="hidden-text">애프터이펙트를 활용한 간단한 모션그래픽 작업을 할 수 있습니다.</p>
                         </div>
                     </div> <!-- adobe -->
                 </div> <!-- skill-flex-box -->
+                <div class="popup-overlay">
+                    <div class="popup-content">
+                        <h2 class="popup-title"></h2>
+                        <p class="popup-text"></p>
+                        <button class="close">Close</button>
+                    </div>
+                </div>
             </section>
 
             <section id="portfolio">
                 <h2>PORTFOLIO</h2>
                 <div class="portfolio-flex">
-                    <div class="portfolio">
+                    <div class="portfolio" id="group">
                         <div class="portfolio-img">
-                            <img src="" alt="">
+                            <ul id="portfolio-slide-m">
+                                <li><img src="./images/main_draft_m.png" alt="main_draft_m"></li>
+                                <li><img src="./images/club_draft_m.png" alt="club_draft_m"></li>
+                                <li><img src="./images/wishlist_draft_m.png" alt="wishlist_draft_m"></li>
+                                <li><img src="./images/order_draft_m.png" alt="order_draft_m"></li>
+                                <li><img src="./images/clubdetail_draft_m.png" alt="clubdetail_draft_m"></li>
+                            </ul>
+                            <ul id="portfolio-slide">
+                                <li><img src="./images/main_draft_pc.png" alt="main_draft_pc"></li>
+                                <li><img src="./images/club_draft_pc.png" alt="club_draft_pc"></li>
+                                <li><img src="./images/wishlist_order_draft_pc.png" alt="wishlist_order_draft_pc"></li>
+                                <li><img src="./images/clubdetail_draft_pc.png" alt="clubdetail_draft_pc"></li>
+                            </ul>
                         </div>
                         <div class="portfolio-des">
                             <h3>MIUMIU 리뉴얼 사이트</h3>
+                            <p>
+                                팀프로젝트<br>
+                                제작 인원: 5인<br>
+                                제작 기간: 5주<br>
+                                담당 역할: 팀장, 메인, 클럽, 주문 추적, 위시리스트 페이지<br>
+                                사용 언어: HTML, SCSS, Javascript, jQuery<br>
+                                디자인 30%, 퍼블리싱 50%
+                            </p>
                             <a href="">디자인가이드</a>
                             <a href="">웹사이트</a>
                         </div>
                     </div>
-                    <div class="portfolio">
+                    <div class="portfolio" id="personal">
                         <div class="portfolio-img">
                             <img src="" alt="">
                         </div>
                         <div class="portfolio-des">
                             <h3>개인 프로필 사이트</h3>
+                            <p>
+                                작업물을 모아서 보여줄 수 있는 페이지를 만들었습니다.<br>
+                                반응형 웹 페이지로 제작하였고,<br>
+                                다양한 애니메이션을 사용했습니다.<br>
+                                사용 언어: HTML, SCSS, Javascript, jQuery<br> 
+                                디자인 100%, 퍼블리싱 100%
+                            </p>
                             <a href="">디자인가이드</a>
                             <a href="">웹사이트</a>
                         </div>
                     </div>
-                    <div class="portfolio">
+                    <div class="portfolio" id="clone">
                         <div class="portfolio-img">
-                            <img src="" alt="">
+                            <img src="./images/clone_pc.PNG" alt="clone_pc">
                         </div>
                         <div class="portfolio-des">
                             <h3>거제씨월드 클론코딩</h3>
+                            <p>
+                                반응형 웹 페이지로 제작하였고,<br>
+                                최대한 원래 사이트를 구현하려고 하였습니다.
+                            </p>
                             <a href="">웹사이트</a>
                         </div>
                     </div>
-                    <div class="portfolio">
+                    <div class="portfolio" id="javascript">
                         <div class="portfolio-img">
                             <img src="" alt="">
                         </div>
@@ -195,7 +261,11 @@
                 <video controls>
                     <source src="./media/premiere.mp4">
                 </video>
-                <h3>프리미어 프로</h3>
+                <h3>영상 편집</h3>
+                <p>
+                    Track Matte Key, Crop, Ultra Key 등의 효과를 사용해서 편집했습니다.<br>
+                    사용 프로그램: 프리미어 프로
+                </p>
             </section>
         </div> <!-- grid -->
     </main>
@@ -208,13 +278,23 @@
         <div class="footer-logo">
             <a href=""><img src="./images/footer_logo.png" alt="footer_logo"></a>
         </div>
-        
+        <div class="footer-logo-pc">
+            <a href=""><img src="./images/footer_logo_pc.png" alt="footer_logo_pc"></a>
+        </div>
         <div class="phone-mail">
             <div class="phone">
                 <p>PHONE: <span>010-8359-2055</span></p>
             </div>
             <div class="mail">
                 <p>E-MAIL: <span>bonoboon4@naver.com</span></p>
+            </div>
+        </div>
+        <div id="top">
+            <div class="top-bg">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </footer>
