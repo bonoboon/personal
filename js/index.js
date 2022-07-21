@@ -43,17 +43,6 @@ window.onload = function() {
     }
 
     setInterval(createBubble, 150);
-    
-    // 고래
-    const header = document.querySelector("header");
-
-    header.addEventListener('mouseover', (e) => {
-        e.target.classList.add('on');
-    })
-
-    header.addEventListener('mouseout', (e) => {
-        e.target.classList.remove('on');
-    }) 
 }
 
 

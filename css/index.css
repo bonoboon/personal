@@ -216,29 +216,22 @@ footer {
 @-webkit-keyframes animate {
   0% {
     transform: translate(-50, -50%);
-    opacity: 1;
   }
-  0% {
+  100% {
     transform: translate(-50, -1000%);
-    opacity: 1;
   }
 }
 @keyframes animate {
   0% {
     transform: translate(-50, -50%);
-    opacity: 1;
   }
-  0% {
+  100% {
     transform: translate(-50, -1000%);
-    opacity: 1;
   }
 }
 @-webkit-keyframes bubble {
   0% {
     transform: translateY(0%);
-    opacity: 1;
-  }
-  99% {
     opacity: 1;
   }
   100% {
@@ -251,218 +244,10 @@ footer {
     transform: translateY(0%);
     opacity: 1;
   }
-  99% {
-    opacity: 1;
-  }
   100% {
     transform: translateY(-20000%);
     opacity: 0;
   }
-}
-.grid {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-header {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0 auto 100px;
-}
-@media screen and (min-width: 1024px) {
-  header {
-    margin-bottom: 0;
-  }
-}
-header .ocean {
-  position: absolute;
-  width: 100%;
-  height: 50vh;
-  left: 0;
-  top: 0;
-  background: #5190d5;
-}
-header .ocean .wave {
-  background: url(../images/header_wave.svg) repeat-x;
-  position: absolute;
-  bottom: -170px;
-  width: 6400px;
-  height: 170px;
-  -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-          animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0);
-}
-header .ocean .wave:nth-of-type(2) {
-  bottom: -178px;
-  -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
-          animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
-  opacity: 0.7;
-}
-header img {
-  width: 100%;
-}
-header div.header-flex-box {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  padding: 0 15px;
-  line-height: 50px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-@media screen and (min-width: 1024px) {
-  header div.header-flex-box {
-    padding: 0 30px;
-  }
-}
-header div.header-flex-box div.logo {
-  display: none;
-  width: 65%;
-  padding-top: 3px;
-}
-@media screen and (min-width: 1024px) {
-  header div.header-flex-box div.logo {
-    display: block;
-  }
-}
-header div.header-flex-box div.logo img {
-  width: auto;
-}
-header div.header-flex-box div.git {
-  padding-top: 8px;
-}
-header div.header-flex-box div#slide-open,
-header div.header-flex-box div#slide-open span {
-  display: inline-block;
-  transition: all 0.4s;
-}
-header div.header-flex-box div#slide-open {
-  position: relative;
-  width: 25px;
-  height: 23px;
-  margin-top: 12px;
-  cursor: pointer;
-}
-@media screen and (min-width: 1024px) {
-  header div.header-flex-box div#slide-open {
-    display: none;
-  }
-}
-header div.header-flex-box div#slide-open span {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 4px;
-}
-header div.header-flex-box div#slide-open span:nth-of-type(1) {
-  top: 0;
-}
-header div.header-flex-box div#slide-open span:nth-of-type(2) {
-  top: 10px;
-}
-header div.header-flex-box div#slide-open span:nth-of-type(3) {
-  bottom: 0;
-}
-header div.header-flex-box div#slide {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  z-index: 1;
-}
-@media screen and (min-width: 1024px) {
-  header div.header-flex-box div#slide {
-    display: none;
-  }
-}
-header div.header-flex-box div#slide ul li {
-  display: inline-block;
-  width: 100%;
-  padding: 5px;
-  border-bottom: 1px solid #666666;
-}
-header div.header-flex-box div#slide ul li a {
-  color: #333333;
-  padding-right: 10px;
-  text-align: right;
-  font-size: 20px;
-}
-header div.header-flex-box nav {
-  display: none;
-  width: 30%;
-}
-@media screen and (min-width: 1024px) {
-  header div.header-flex-box nav {
-    display: block;
-  }
-}
-header div.header-flex-box nav ul#gnb {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-header div.header-flex-box nav ul#gnb li a {
-  font-size: 18px;
-  color: white;
-}
-header .blue-ocean {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-header .blue-whale {
-  height: 7vmin;
-  width: 13vmin;
-  background-color: transparent;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) rotate(0deg);
-  border-radius: 0% 30% 5% 0%;
-  top: 30%;
-}
-header .blue-whale:after {
-  content: "";
-  z-index: -1;
-  width: 20vmin;
-  height: 6vmin;
-  position: absolute;
-  transform: rotate(10deg);
-  top: 52%;
-  right: -6%;
-  background: linear-gradient(to bottom, #4C6180 0%, #607aa0 80%, #607aa0 82%, #607aa0 84%, #607aa0 100%, #607aa0 100%);
-  opacity: 0.1;
-}
-header .blue-whale-color {
-  height: 2vmin;
-  width: 17vmin;
-  background-color: transparent;
-  position: absolute;
-  top: 4vmin;
-  left: 1vmin;
-  box-shadow: 2vmin -6vmin 6vmin #fff;
-  z-index: 1;
-}
-header .blue-whale-color-bottom {
-  height: 0.5vmin;
-  width: 17vmin;
-  background-color: transparent;
-  position: absolute;
-  top: 2.5vmin;
-  left: 1vmin;
-  box-shadow: -1vmin 4vmin 4vmin #090E15;
-  z-index: 1;
 }
 @-webkit-keyframes whale-move {
   0% {
@@ -479,18 +264,6 @@ header .blue-whale-color-bottom {
   100% {
     transform: translateX(500%);
   }
-}
-header .blue-whale-main {
-  height: 7vmin;
-  width: 20vmin;
-  background: #5fe1ff;
-  position: absolute;
-  left: 30%;
-  transform: translateX(-50%) rotate(0deg);
-  border-radius: 0% 30% 2% 0%;
-  transform-origin: 0% 50%;
-  overflow: hidden;
-  z-index: 1;
 }
 @-webkit-keyframes whale-swim {
   0% {
@@ -525,47 +298,6 @@ header .blue-whale-main {
   100% {
     transform: translateX(-50%) rotate(0deg);
   }
-}
-header .blue-whale-backside {
-  height: 7vmin;
-  width: 12vmin;
-  background: #758AA7;
-  position: absolute;
-  left: -124%;
-  border-radius: 0% 0% 0% 100%;
-  overflow: hidden;
-  box-shadow: inset 0vmin -2vmin 3vmin #71819A;
-}
-header .blue-whale-eye {
-  position: absolute;
-  top: 70%;
-  right: 30%;
-  width: 1vmin;
-  height: 0.3vmin;
-  border-radius: 50%;
-  background-color: #6E798A;
-}
-header .gill-container {
-  background-color: transparent;
-  height: 3vmin;
-  width: 4vmin;
-  border-radius: 0 0 4vmin 0;
-  position: absolute;
-  left: 25%;
-  top: 70%;
-  transform-origin: 100% 100%;
-  overflow: hidden;
-}
-header .blue-whale-gill {
-  background-color: #9DA6B5;
-  height: 3vmin;
-  width: 5vmin;
-  border-radius: 0 0 4vmin 0;
-  position: absolute;
-  -webkit-animation: whale-gill 3s ease-in-out infinite;
-          animation: whale-gill 3s ease-in-out infinite;
-  transform-origin: 100% 100%;
-  transform: rotate(15deg);
 }
 @-webkit-keyframes whale-gill {
   0% {
@@ -611,10 +343,6 @@ header .blue-whale-gill {
     box-shadow: 2px 2px 2px #62728A;
   }
 }
-header .blue-ocean:hover .blue-whale-gill {
-  -webkit-animation: whale-gill1 3s ease-in-out infinite;
-          animation: whale-gill1 3s ease-in-out infinite;
-}
 @-webkit-keyframes whale-gill1 {
   0% {
     height: 2vmin;
@@ -658,33 +386,6 @@ header .blue-ocean:hover .blue-whale-gill {
     height: 2vmin;
     box-shadow: 2px 2px 2px #62728A;
   }
-}
-header .blue-whale-flipper {
-  left: -166%;
-  top: -36%;
-  position: absolute;
-  width: 6vmin;
-  height: 2.5vmin;
-  background-color: #687B96;
-  border-radius: 0px 20vmin 0px 20vmin;
-  transform-origin: 100% 100%;
-  transition: 0.4s ease-in-out;
-  transform: rotate(-73deg);
-  -webkit-animation: flipper-simple 3s ease-in-out infinite;
-          animation: flipper-simple 3s ease-in-out infinite;
-}
-header .blue-whale-flipper:after {
-  content: "";
-  left: 0%;
-  top: 0%;
-  position: absolute;
-  width: 6vmin;
-  height: 2.5vmin;
-  background-color: #758AA7;
-  border-radius: 0px 20vmin 0px 20vmin;
-  transform-origin: 100% 100%;
-  transition: 0.4s ease-in-out;
-  transform: rotate(-20deg);
 }
 @-webkit-keyframes whale-swim-back {
   0% {
@@ -792,36 +493,570 @@ header .blue-whale-flipper:after {
     transform: rotate(-73deg);
   }
 }
-header .blue-ocean:hover .blue-whale {
+@-webkit-keyframes anim1 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(30deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes anim1 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(30deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@-webkit-keyframes anim2 {
+  0% {
+    transform: rotateY(30deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(30deg);
+  }
+}
+@keyframes anim2 {
+  0% {
+    transform: rotateY(30deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(30deg);
+  }
+}
+@-webkit-keyframes swim {
+  0% {
+    margin-left: -235px;
+  }
+  70% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+@keyframes swim {
+  0% {
+    margin-left: -235px;
+  }
+  70% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  75% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  75% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes waves {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+@keyframes waves {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+@-webkit-keyframes bubbles {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes bubbles {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@-webkit-keyframes bubbleWhite {
+  0% {
+    bottom: -10%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+@keyframes bubbleWhite {
+  0% {
+    bottom: -10%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+.grid {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    margin: 0;
+  }
+}
+header div#ocean {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #5190d5;
+}
+header div#ocean::after, header div#ocean::before {
+  background-color: white;
+  position: absolute;
+  width: 120%;
+  height: 120px;
+  content: "";
+  bottom: -80px;
+  left: -10%;
+  border-radius: 100%;
+  -webkit-animation: waves 10s ease infinite;
+          animation: waves 10s ease infinite;
+  opacity: 0.2;
+}
+header div#ocean::before {
+  bottom: -60px;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  opacity: 0.1;
+  left: -5%;
+}
+header div#ocean div.blue-whale {
+  height: 7vmin;
+  width: 13vmin;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  border-radius: 0% 30% 5% 0%;
+  top: 30%;
+}
+header div#ocean div.blue-whale:after {
+  content: "";
+  z-index: -1;
+  width: 20vmin;
+  height: 6vmin;
+  position: absolute;
+  transform: rotate(10deg);
+  top: 52%;
+  right: -6%;
+  background: linear-gradient(to bottom, #4C6180 0%, #607aa0 80%, #607aa0 82%, #607aa0 84%, #607aa0 100%, #607aa0 100%);
+  opacity: 0.1;
+}
+header div#ocean div.blue-whale div.blue-whale-main {
+  height: 7vmin;
+  width: 20vmin;
+  background: #758AA7;
+  position: absolute;
+  left: 30%;
+  transform: translateX(-50%) rotate(0deg);
+  border-radius: 0% 30% 2% 0%;
+  transform-origin: 0% 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+header div#ocean div.blue-whale div.blue-whale-main div.blue-whale-eye {
+  position: absolute;
+  top: 70%;
+  right: 30%;
+  width: 1vmin;
+  height: 0.3vmin;
+  border-radius: 50%;
+  background-color: #6E798A;
+}
+header div#ocean div.blue-whale div.blue-whale-main div.gill-container {
+  background-color: transparent;
+  height: 3vmin;
+  width: 4vmin;
+  border-radius: 0 0 4vmin 0;
+  position: absolute;
+  left: 25%;
+  top: 70%;
+  transform-origin: 100% 100%;
+  overflow: hidden;
+}
+header div#ocean div.blue-whale div.blue-whale-main div.gill-container div.blue-whale-gill {
+  background-color: #9DA6B5;
+  height: 3vmin;
+  width: 5vmin;
+  border-radius: 0 0 4vmin 0;
+  position: absolute;
+  -webkit-animation: whale-gill 3s ease-in-out infinite;
+          animation: whale-gill 3s ease-in-out infinite;
+  transform-origin: 100% 100%;
+  transform: rotate(15deg);
+}
+header div#ocean div.blue-whale div.blue-whale-main div.blue-whale-color {
+  height: 2vmin;
+  width: 17vmin;
+  background-color: transparent;
+  position: absolute;
+  top: 4vmin;
+  left: 1vmin;
+  box-shadow: 2vmin -6vmin 6vmin #fff;
+  z-index: 1;
+}
+header div#ocean div.blue-whale div.blue-whale-main div.blue-whale-color-bottom {
+  height: 0.5vmin;
+  width: 17vmin;
+  background-color: transparent;
+  position: absolute;
+  top: 2.5vmin;
+  left: 1vmin;
+  box-shadow: -1vmin 4vmin 4vmin #090E15;
+  z-index: 1;
+}
+header div#ocean div.blue-whale div.blue-whale-backside {
+  height: 7vmin;
+  width: 12vmin;
+  background: #758AA7;
+  position: absolute;
+  left: -124%;
+  border-radius: 0% 0% 0% 100%;
+  overflow: hidden;
+  box-shadow: inset 0vmin -2vmin 3vmin #71819A;
+}
+header div#ocean div.blue-whale div.blue-whale-flipper {
+  left: -166%;
+  top: -36%;
+  position: absolute;
+  width: 6vmin;
+  height: 2.5vmin;
+  background-color: #687B96;
+  border-radius: 0px 20vmin 0px 20vmin;
+  transform-origin: 100% 100%;
+  transition: 0.4s ease-in-out;
+  transform: rotate(-73deg);
+  -webkit-animation: flipper-simple 3s ease-in-out infinite;
+          animation: flipper-simple 3s ease-in-out infinite;
+}
+header div#ocean div.blue-whale div.blue-whale-flipper:after {
+  content: "";
+  left: 0%;
+  top: 0%;
+  position: absolute;
+  width: 6vmin;
+  height: 2.5vmin;
+  background-color: #758AA7;
+  border-radius: 0px 20vmin 0px 20vmin;
+  transform-origin: 100% 100%;
+  transition: 0.4s ease-in-out;
+  transform: rotate(-20deg);
+}
+header div#ocean div.blue-whale div.bubbles {
+  width: 100%;
+  height: 100vh;
+  -webkit-animation: bubbles 10s linear infinite;
+          animation: bubbles 10s linear infinite;
+}
+header div#ocean div.blue-whale div.bubbles span {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: white;
+  bottom: -10%;
+  -webkit-animation: bubbleWhite 10s ease-in-out infinite;
+          animation: bubbleWhite 10s ease-in-out infinite;
+}
+header div#ocean div.blue-whale div.bubbles span:nth-child(1) {
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+  left: 10%;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  opacity: 0.2;
+}
+header div#ocean div.blue-whale div.bubbles span:nth-child(2) {
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+  left: 40%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  opacity: 0.1;
+}
+header div#ocean div.blue-whale div.bubbles span:nth-child(3) {
+  width: 10px;
+  height: 10px;
+  opacity: 0.5;
+  left: 30%;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  opacity: 0.3;
+}
+header div#ocean div.blue-whale div.bubbles span:nth-child(4) {
+  width: 35px;
+  height: 35px;
+  opacity: 0.5;
+  left: 40%;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  opacity: 0.2;
+}
+header div#ocean div.blue-whale div.bubbles span:nth-child(5) {
+  width: 45px;
+  height: 45px;
+  opacity: 0.5;
+  left: 60%;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  opacity: 0.1;
+}
+header div#ocean div.blue-whale div.bubbles span:nth-child(6) {
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+  left: 80%;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  opacity: 0.4;
+}
+header div#ocean div.blue-whale div.bubbles span:nth-child(7) {
+  width: 15px;
+  height: 15px;
+  opacity: 0.5;
+  left: 90%;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  opacity: 0.3;
+}
+header div#ocean div.blue-whale div.bubbles span:nth-child(8) {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  left: 50%;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  opacity: 0.2;
+}
+header img {
+  width: 100%;
+}
+header #ocean:hover .blue-whale {
   -webkit-animation: whale-move 15s linear infinite;
           animation: whale-move 15s linear infinite;
 }
-header .blue-ocean:hover .blue-whale-main {
+header #ocean:hover .blue-whale-gill {
+  -webkit-animation: whale-gill1 3s ease-in-out infinite;
+          animation: whale-gill1 3s ease-in-out infinite;
+}
+header #ocean:hover .blue-whale-main {
   -webkit-animation: whale-swim 2s linear infinite;
           animation: whale-swim 2s linear infinite;
 }
-header .blue-ocean:hover .blue-whale-backside {
+header #ocean:hover .blue-whale-backside {
   -webkit-animation: whale-swim-back 2s linear infinite;
           animation: whale-swim-back 2s linear infinite;
 }
-header .blue-ocean:hover .blue-whale-flipper {
+header #ocean:hover .blue-whale-flipper {
   -webkit-animation: flipper-move 2s linear infinite;
           animation: flipper-move 2s linear infinite;
 }
-header .blue-whale-line1 {
-  width: 40vmin;
-  height: 5vmin;
-  background-color: transparent;
+header div.header-flex-box {
+  display: flex;
+  justify-content: space-between;
   position: absolute;
-  left: 40%;
-  top: -10%;
-  box-shadow: 1vmin 2vmin 25vmin #F5DAF4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  line-height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box {
+    padding: 0 30px;
+  }
+}
+header div.header-flex-box div.logo {
+  display: none;
+  width: 65%;
+  padding-top: 3px;
+}
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box div.logo {
+    display: block;
+  }
+}
+header div.header-flex-box div.logo img {
+  width: auto;
+}
+header div.header-flex-box div.git {
+  padding-top: 8px;
+}
+header div.header-flex-box div#slide-open,
+header div.header-flex-box div#slide-open span {
+  display: inline-block;
+  transition: all 0.4s;
+  z-index: 1;
+}
+header div.header-flex-box div#slide-open {
+  position: relative;
+  width: 25px;
+  height: 23px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box div#slide-open {
+    display: none;
+  }
+}
+header div.header-flex-box div#slide-open span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+header div.header-flex-box div#slide-open span:nth-of-type(1) {
+  top: 0;
+}
+header div.header-flex-box div#slide-open span:nth-of-type(2) {
+  top: 10px;
+}
+header div.header-flex-box div#slide-open span:nth-of-type(3) {
+  bottom: 0;
+}
+header div.header-flex-box div#slide {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+header div.header-flex-box div#slide ul li {
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid #666666;
+}
+header div.header-flex-box div#slide ul li a {
+  color: #333333;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 20px;
+}
+header div.header-flex-box nav {
+  display: none;
+  width: 30%;
+}
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box nav {
+    display: block;
+  }
+}
+header div.header-flex-box nav ul#gnb {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header div.header-flex-box nav ul#gnb li a {
+  font-size: 18px;
+  color: white;
 }
 header div#logo-big {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 1024px) {
   header div#logo-big h1 {
@@ -1169,6 +1404,7 @@ main#bubble section#video {
   }
 }
 main#bubble section#video video {
+  width: 100%;
   margin: 0 auto 35px;
   background-color: #f6ffeb;
 }
@@ -1181,7 +1417,7 @@ footer {
   overflow: hidden;
   background-color: #fff;
 }
-footer .ocean {
+footer div#footer-ocean {
   position: absolute;
   width: 100%;
   height: 20vh;
@@ -1190,11 +1426,11 @@ footer .ocean {
   background: #5190d5;
 }
 @media screen and (min-width: 1024px) {
-  footer .ocean {
+  footer div#footer-ocean {
     height: 50vh;
   }
 }
-footer .ocean .wave {
+footer div#footer-ocean div.wave {
   background: url(../images/footer_wave.svg) repeat-x;
   position: absolute;
   top: -198px;
@@ -1204,14 +1440,53 @@ footer .ocean .wave {
           animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
 }
-footer .ocean .wave:nth-of-type(2) {
+footer div#footer-ocean div.wave:nth-of-type(2) {
   top: -190px;
   -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
           animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
   opacity: 0.5;
 }
-footer img {
-  width: 100%;
+footer div#footer-ocean svg#fish {
+  top: 5em;
+}
+footer div#footer-ocean svg.fish {
+  position: absolute;
+  width: 235px;
+  height: 104px;
+  overflow: visible;
+  margin-left: -235px;
+  fill: #ffde4a;
+  -webkit-animation: swim 20s infinite linear;
+          animation: swim 20s infinite linear;
+}
+footer div#footer-ocean svg.fish svg #fish1,
+footer div#footer-ocean svg.fish svg #fish2,
+footer div#footer-ocean svg.fish svg #fish3,
+footer div#footer-ocean svg.fish svg #fish4,
+footer div#footer-ocean svg.fish svg #fish5,
+footer div#footer-ocean svg.fish svg #fish6 {
+  -webkit-animation: bounce 2s infinite;
+          animation: bounce 2s infinite;
+}
+footer div#footer-ocean svg.fish svg #fish2 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+footer div#footer-ocean svg.fish svg #fish3 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+footer div#footer-ocean svg.fish svg #fish4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+footer div#footer-ocean svg.fish svg #fish5 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+footer div#footer-ocean svg.fish svg #fish6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 footer div.footer-logo {
   position: absolute;
@@ -1224,11 +1499,11 @@ footer div.footer-logo {
     display: none;
   }
 }
-footer div.footer-logo-pc {
+footer div.footer-whale {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  footer div.footer-logo-pc {
+  footer div.footer-whale {
     display: block;
     position: absolute;
     bottom: 20%;
