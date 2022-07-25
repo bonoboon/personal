@@ -43,6 +43,77 @@ window.onload = function() {
     }
 
     setInterval(createBubble, 150);
+
+    // 북극곰
+    var limit = document.getElementById('limit'),
+    face  = document.getElementById('face'),
+    nose  = document.getElementById('nose'),
+    fish  = document.getElementById('fish'),
+    ears  = document.querySelectorAll('.ear');
+
+    var mouse = {x:0, y:0},
+    center = {
+        x: window.innerWidth/2, 
+        y: window.innerHeight/2
+    },
+    limit = {
+        left: - (limit.offsetWidth  - face.offsetWidth)  / 2,
+        right:  (limit.offsetWidth  - face.offsetWidth)  / 2,
+        top:  - (limit.offsetHeight - face.offsetHeight) / 2,
+        bottom: (limit.offsetHeight - face.offsetHeight) / 2,
+    },
+    eyeSize = 20,
+    eyeSizeRate = 12,
+    noseMoveRate = 2.5,
+    earMoveRate = 3.5,
+    faceMoveRate = 10;
+
+    function translate (selector, x, y) {
+        selector.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+    }
+
+    function interact (e) {
+        mouse.x = e.touches ? e.touches[0].clientX : e.clientX;
+        mouse.y = e.touches ? e.touches[0].clientY : e.clientY;
+        
+        var dx = (mouse.x - center.x)/faceMoveRate,
+            dy = (mouse.y - center.y)/faceMoveRate,
+            classX = dx < 0 ? 'left' : 'right';
+        
+        dx = dx < limit.left ? limit.left :
+            dx > limit.right ? limit.right : dx;
+        
+        dy = dy < limit.top ? limit.top :
+            dy > limit.bottom ? limit.bottom : dy;
+            
+        var eye = document.getElementsByClassName(classX + '-eye')[0],
+            size = Math.round(eyeSize - Math.abs(dx)/eyeSizeRate),
+            margin = Math.round((eyeSize - size)/2);
+        
+        eye.style.cssText = 'width:' + size + 'px; \
+                            height:' + size + 'px; \
+                            margin-left:' + margin +'px; \
+                            margin-top: ' + margin +'px;';
+        
+        fish.style.cssText = 
+            'left:' + mouse.x + 'px; \
+            top:' + mouse.y + 'px;'
+
+        translate(face, dx, dy);
+
+        for (var i = 0; i < ears.length; i++) {
+            translate(ears[i], -dx/earMoveRate, -dy/earMoveRate);
+        }
+        
+        translate(nose, dx/noseMoveRate, dy/noseMoveRate);
+    }
+
+    window.addEventListener("mousemove", interact);
+    window.addEventListener("touchmove", interact);
+    window.addEventListener("resize", function () {
+        center.x = window.innerWidth/2;
+        center.y = window.innerHeight/2;
+    });
 }
 
 
@@ -73,11 +144,11 @@ $(function() {
     });
    
 
-    // 로고
+    // 로고 물방울
     var bArray = [];
     var sArray = [4,6,8,10];
      
-    for (var i = 0; i < $('#logo-big').width(); i++) {
+    for (var i = 0; i < $('#title').width(); i++) {
         bArray.push(i);
     }
          
@@ -87,7 +158,7 @@ $(function() {
      
     setInterval(() => {
         var size = randomValue(sArray);
-        $('#logo-big').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+        $('#title').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
             
         $('.individual-bubble').animate({
             'bottom': '100%',
@@ -98,7 +169,11 @@ $(function() {
         );
     }, 350);
     
-    // 모바일 메뉴 슬라이드
+    // 모바일 메뉴
+    $("#slide-open").click(() => {
+        $("#slide").slideToggle(500, 'swing');
+    });
+
     $("#slide-open").click(function() {
         if($(this).hasClass('active')) {
             $(this).removeClass('active');
@@ -123,23 +198,16 @@ $(function() {
         });
     }, 4000);
 
-    // 모달창
+    // skill 모달창
     $(".skills").on("click", function() {
-        const hiddenTitle = $(this).children(".hidden-title").text();
-        const hiddenText = $(this).children(".hidden-text").text();
         $(".popup-overlay, .popup-content").addClass("active");
-        $(".popup-title").text(hiddenTitle);
-        $(".popup-text").text(hiddenText);
+        $(".popup-title").text($(this).children(".hidden-title").text());
+        $(".popup-text").text($(this).children(".hidden-text").text());
     });
       
     $(".close, .popup-overlay").on("click", function() {
         $(".popup-overlay, .popup-content").removeClass("active");
     });
-
-    // 모바일 메뉴
-    $("#slide-open").click(() => {
-        $("#slide").slideToggle(500, 'swing');
-    })
 });
 
 

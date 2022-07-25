@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" property="og:title" content="YERIN KIM PORTFOLIO">
+    <meta name="images" property="og:image" content="./images/thumbnail.jpg">
+    <meta name="description" property="og:description" content="김예린의 프로필 포트폴리오입니다.">
+    <meta name="type" property="og:type" content="article">
+    <meta name="yerin" content="portfolio">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./images/favicon.ico">
     <title>YERIN KIM PORTFOLIO</title>
     <script src="./js/jquery.js"></script>
     <script src="./js/index.js"></script>
@@ -12,18 +18,6 @@
 <body>
     <header>
         <div id="ocean">
-            <div class="blue-whale">
-                <div class="blue-whale-main">
-                    <div class="blue-whale-eye"></div>
-                    <div class="gill-container">
-                        <div class="blue-whale-gill"></div>
-                    </div>
-                    <div class="blue-whale-color"></div>
-                    <div class="blue-whale-color-bottom"></div>
-                </div>
-                <div class="blue-whale-backside"><div></div></div>
-                <div class="blue-whale-flipper"></div>						
-            </div> <!-- blue-whale -->
             <div class="bubbles">
                 <span></span>
                 <span></span>
@@ -33,7 +27,34 @@
                 <span></span>
                 <span></span>
                 <span></span>
-            </div> <!-- bubbles -->
+            </div>
+            <div class="bear">
+                <div class="ears-container">
+                    <div class="ear"></div>
+                    <div class="ear"></div>
+                </div>
+                <div id="limit">
+                    <div id="face">
+                        <div class="eyes-container">
+                            <div class="eye left-eye"></div>
+                            <div class="eye right-eye"></div>
+                        </div>
+                        <div class="phiz-container">
+                            <div id="nose">
+                                <div class="dot"></div>
+                            </div>
+                            <div class="mouth"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- bear -->
+            <div id="fish">
+                <div class="head">
+                    <div class="fish-eye"></div>
+                </div>
+                <div class="fins"></div>
+                <div class="tail"></div>
+            </div>
         </div> <!-- ocean -->
         <div class="header-flex-box">
             <div class="logo">
@@ -62,9 +83,7 @@
                 </ul>
             </nav>
         </div> <!-- header-flex-box -->
-        
-	
-        <div id="logo-big">
+        <div id="title">
             <h1>
                 YERIN KIM<br>
                 PORTFOLIO
@@ -159,7 +178,7 @@
                             <img src="./images/ai.png" alt="ai" class="icon">
                             <p class="count">80</p>
                             <p class="hidden-title">Illustrator</p>
-                            <p class="hidden-text">로고, 아이콘 제작 등 벡터 소스의 자유로운 제작과 편집이 가능하고 웹 페이지 제작을 위한 시안 작업이 가능합니다.</p>
+                            <p class="hidden-text">로고, 아이콘 등 벡터 소스의 자유로운 제작과 편집이 가능하고 웹 페이지 제작을 위한 시안 작업이 가능합니다.</p>
                         </div>
                         <div class="skills" id="pr">
                             <div class="outer-circle"></div>
@@ -186,6 +205,7 @@
                         <button class="close">Close</button>
                     </div>
                 </div>
+
             </section>
 
             <section id="portfolio">
@@ -309,9 +329,12 @@
                     d="m 68.19699,20.522295 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89798,-3.079245 C 55.39553,11.384887 49.845,10.221274 44.30305,9.4752582 42.0307,9.1888572 39.49082,9.3063332 37.58119,7.900907 36.09945,6.819613 33.53126,3.072384 30.71613,1.444869 30.22993,1.154181 27.94386,0 27.94386,0 c 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.0418502 2.13772,0.8129002 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 C 8.52001,12.607667 5.45192,9.8611282 2.35895,6.755302 3.79696,13.480591 7.79715,17.358159 7.97465,18.177919 8.16072,19.083427 7.51504,19.269502 6.93366,19.860313 5.64399,21.125967 0.018,27.591438 0,29.641695 1.61379,29.39388 3.56115,27.980738 4.9803,27.155833 c 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527188 0.22638,0.746016 1.44144,1.46545 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.071359 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.644,1.353976 8.56032,1.353976 3.50799,0.0094 12.726,0.258104 19.55505,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.57709 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925921 z"
                    id="fish1" />
               </svg>
-        </div>
+        </div> <!-- footer-ocean -->
         <div class="footer-logo">
-            <a href=""><img src="./images/footer_logo.png" alt="footer_logo"></a>
+            <a href="./index.html"><img src="./images/footer_logo.png" alt="footer_logo"></a>
+        </div>
+        <div class="footer-logo-pc">
+            <a href="./index.html"><img src="./images/footer_logo_pc.png" alt="footer_logo_pc"></a>
         </div>
         <div class="footer-whale">
             <img src="./images/footer_whale.png" alt="footer_whale">

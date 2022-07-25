@@ -28,7 +28,7 @@ img {
 h1 {
   font-family: "ONE-Mobile-POP";
   font-size: 60px;
-  color: #fff;
+  color: white;
 }
 
 h2 {
@@ -64,53 +64,97 @@ footer {
   font-style: normal;
 }
 @font-face {
-  font-family: "CookieRun-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "ONE-Mobile-POP";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-@-webkit-keyframes wave {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: -1600px;
-  }
+@font-face {
+  font-family: "CookieRun-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-@keyframes wave {
+@-webkit-keyframes waves {
   0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: -1600px;
-  }
-}
-@-webkit-keyframes swell {
-  0% {
-    transform: translate3d(0, -25px, 0);
+    transform: rotate(-2deg);
   }
   50% {
-    transform: translate3d(0, 5px, 0);
+    transform: rotate(2deg);
   }
   100% {
-    transform: translate3d(0, -25px, 0);
+    transform: rotate(-2deg);
   }
 }
-@keyframes swell {
+@keyframes waves {
   0% {
-    transform: translate3d(0, -25px, 0);
+    transform: rotate(-2deg);
   }
   50% {
-    transform: translate3d(0, 5px, 0);
+    transform: rotate(2deg);
   }
   100% {
-    transform: translate3d(0, -25px, 0);
+    transform: rotate(-2deg);
+  }
+}
+@-webkit-keyframes bubble {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20000%);
+    opacity: 0;
+  }
+}
+@keyframes bubble {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20000%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes bubbles {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes bubbles {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+@-webkit-keyframes bubbleani {
+  0% {
+    bottom: -10%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+@keyframes bubbleani {
+  0% {
+    bottom: -10%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 100%;
   }
 }
 @-webkit-keyframes fill90 {
@@ -213,328 +257,42 @@ footer {
     transform: translate(-50%) rotate(360deg);
   }
 }
-@-webkit-keyframes animate {
+@-webkit-keyframes wave {
   0% {
-    transform: translate(-50, -50%);
+    margin-left: 0;
   }
   100% {
-    transform: translate(-50, -1000%);
+    margin-left: -1600px;
   }
 }
-@keyframes animate {
+@keyframes wave {
   0% {
-    transform: translate(-50, -50%);
+    margin-left: 0;
   }
   100% {
-    transform: translate(-50, -1000%);
+    margin-left: -1600px;
   }
 }
-@-webkit-keyframes bubble {
+@-webkit-keyframes swell {
   0% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-20000%);
-    opacity: 0;
-  }
-}
-@keyframes bubble {
-  0% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-20000%);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes whale-move {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(500%);
-  }
-}
-@keyframes whale-move {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(500%);
-  }
-}
-@-webkit-keyframes whale-swim {
-  0% {
-    transform: translateX(-50%) rotate(0deg);
-  }
-  25% {
-    transform: translateX(-50%) rotate(-3deg);
+    transform: translate3d(0, -25px, 0);
   }
   50% {
-    transform: translateX(-50%) rotate(0deg);
-  }
-  75% {
-    transform: translateX(-50%) rotate(3deg);
+    transform: translate3d(0, 5px, 0);
   }
   100% {
-    transform: translateX(-50%) rotate(0deg);
+    transform: translate3d(0, -25px, 0);
   }
 }
-@keyframes whale-swim {
+@keyframes swell {
   0% {
-    transform: translateX(-50%) rotate(0deg);
-  }
-  25% {
-    transform: translateX(-50%) rotate(-3deg);
+    transform: translate3d(0, -25px, 0);
   }
   50% {
-    transform: translateX(-50%) rotate(0deg);
-  }
-  75% {
-    transform: translateX(-50%) rotate(3deg);
+    transform: translate3d(0, 5px, 0);
   }
   100% {
-    transform: translateX(-50%) rotate(0deg);
-  }
-}
-@-webkit-keyframes whale-gill {
-  0% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-  10% {
-    height: 3vmin;
-    box-shadow: none;
-  }
-  70% {
-    height: 3vmin;
-    box-shadow: none;
-  }
-  80% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-  100% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-}
-@keyframes whale-gill {
-  0% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-  10% {
-    height: 3vmin;
-    box-shadow: none;
-  }
-  70% {
-    height: 3vmin;
-    box-shadow: none;
-  }
-  80% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-  100% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-}
-@-webkit-keyframes whale-gill1 {
-  0% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-  10% {
-    height: 3vmin;
-    box-shadow: none;
-  }
-  70% {
-    height: 3vmin;
-    box-shadow: none;
-  }
-  80% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-  100% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-}
-@keyframes whale-gill1 {
-  0% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-  10% {
-    height: 3vmin;
-    box-shadow: none;
-  }
-  70% {
-    height: 3vmin;
-    box-shadow: none;
-  }
-  80% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-  100% {
-    height: 2vmin;
-    box-shadow: 2px 2px 2px #62728A;
-  }
-}
-@-webkit-keyframes whale-swim-back {
-  0% {
-    border-radius: 10% 0% 0% 100%;
-  }
-  25% {
-    border-radius: 10% 0% 0% 100%;
-  }
-  50% {
-    border-radius: 100% 0% 0% 10%;
-  }
-  75% {
-    border-radius: 100% 0% 0% 10%;
-  }
-  100% {
-    border-radius: 10% 0% 0% 100%;
-  }
-}
-@keyframes whale-swim-back {
-  0% {
-    border-radius: 10% 0% 0% 100%;
-  }
-  25% {
-    border-radius: 10% 0% 0% 100%;
-  }
-  50% {
-    border-radius: 100% 0% 0% 10%;
-  }
-  75% {
-    border-radius: 100% 0% 0% 10%;
-  }
-  100% {
-    border-radius: 10% 0% 0% 100%;
-  }
-}
-@-webkit-keyframes flipper-simple {
-  0% {
-    transform: rotate(-73deg);
-  }
-  25% {
-    transform: rotate(-13deg);
-  }
-  70% {
-    transform: rotate(-13deg);
-  }
-  100% {
-    transform: rotate(-73deg);
-  }
-}
-@keyframes flipper-simple {
-  0% {
-    transform: rotate(-73deg);
-  }
-  25% {
-    transform: rotate(-13deg);
-  }
-  70% {
-    transform: rotate(-13deg);
-  }
-  100% {
-    transform: rotate(-73deg);
-  }
-}
-@-webkit-keyframes flipper-move {
-  0% {
-    top: -35%;
-    transform: rotate(-73deg);
-  }
-  25% {
-    top: -35%;
-    transform: rotate(25deg);
-  }
-  50% {
-    top: 58%;
-    transform: rotate(25deg);
-  }
-  75% {
-    top: 58%;
-    transform: rotate(-73deg);
-  }
-  100% {
-    top: -35%;
-    transform: rotate(-73deg);
-  }
-}
-@keyframes flipper-move {
-  0% {
-    top: -35%;
-    transform: rotate(-73deg);
-  }
-  25% {
-    top: -35%;
-    transform: rotate(25deg);
-  }
-  50% {
-    top: 58%;
-    transform: rotate(25deg);
-  }
-  75% {
-    top: 58%;
-    transform: rotate(-73deg);
-  }
-  100% {
-    top: -35%;
-    transform: rotate(-73deg);
-  }
-}
-@-webkit-keyframes anim1 {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(30deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
-}
-@keyframes anim1 {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(30deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
-}
-@-webkit-keyframes anim2 {
-  0% {
-    transform: rotateY(30deg);
-  }
-  50% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(30deg);
-  }
-}
-@keyframes anim2 {
-  0% {
-    transform: rotateY(30deg);
-  }
-  50% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(30deg);
+    transform: translate3d(0, -25px, 0);
   }
 }
 @-webkit-keyframes swim {
@@ -557,6 +315,22 @@ footer {
   }
   100% {
     margin-left: 100%;
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: translate(-50, -50%);
+  }
+  100% {
+    transform: translate(-50, -1000%);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50, -50%);
+  }
+  100% {
+    transform: translate(-50, -1000%);
   }
 }
 @-webkit-keyframes bounce {
@@ -593,68 +367,6 @@ footer {
     transform: translate(0);
   }
 }
-@-webkit-keyframes waves {
-  0% {
-    transform: rotate(-2deg);
-  }
-  50% {
-    transform: rotate(2deg);
-  }
-  100% {
-    transform: rotate(-2deg);
-  }
-}
-@keyframes waves {
-  0% {
-    transform: rotate(-2deg);
-  }
-  50% {
-    transform: rotate(2deg);
-  }
-  100% {
-    transform: rotate(-2deg);
-  }
-}
-@-webkit-keyframes bubbles {
-  0% {
-    transform: rotate(-5deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(-5deg);
-  }
-}
-@keyframes bubbles {
-  0% {
-    transform: rotate(-5deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(-5deg);
-  }
-}
-@-webkit-keyframes bubbleWhite {
-  0% {
-    bottom: -10%;
-    opacity: 0;
-  }
-  100% {
-    bottom: 100%;
-  }
-}
-@keyframes bubbleWhite {
-  0% {
-    bottom: -10%;
-    opacity: 0;
-  }
-  100% {
-    bottom: 100%;
-  }
-}
 .grid {
   position: relative;
   width: 100%;
@@ -671,6 +383,7 @@ header {
 @media screen and (min-width: 1024px) {
   header {
     margin: 0;
+    cursor: none;
   }
 }
 header div#ocean {
@@ -681,17 +394,17 @@ header div#ocean {
   background: #5190d5;
 }
 header div#ocean::after, header div#ocean::before {
-  background-color: white;
-  position: absolute;
-  width: 120%;
-  height: 120px;
   content: "";
+  position: absolute;
   bottom: -80px;
   left: -10%;
+  width: 120%;
+  height: 120px;
   border-radius: 100%;
+  opacity: 0.2;
+  background-color: white;
   -webkit-animation: waves 10s ease infinite;
           animation: waves 10s ease infinite;
-  opacity: 0.2;
 }
 header div#ocean::before {
   bottom: -60px;
@@ -700,145 +413,23 @@ header div#ocean::before {
   opacity: 0.1;
   left: -5%;
 }
-header div#ocean div.blue-whale {
-  height: 7vmin;
-  width: 13vmin;
-  background-color: transparent;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) rotate(0deg);
-  border-radius: 0% 30% 5% 0%;
-  top: 30%;
-}
-header div#ocean div.blue-whale:after {
-  content: "";
-  z-index: -1;
-  width: 20vmin;
-  height: 6vmin;
-  position: absolute;
-  transform: rotate(10deg);
-  top: 52%;
-  right: -6%;
-  background: linear-gradient(to bottom, #4C6180 0%, #607aa0 80%, #607aa0 82%, #607aa0 84%, #607aa0 100%, #607aa0 100%);
-  opacity: 0.1;
-}
-header div#ocean div.blue-whale div.blue-whale-main {
-  height: 7vmin;
-  width: 20vmin;
-  background: #758AA7;
-  position: absolute;
-  left: 30%;
-  transform: translateX(-50%) rotate(0deg);
-  border-radius: 0% 30% 2% 0%;
-  transform-origin: 0% 50%;
-  overflow: hidden;
-  z-index: 1;
-}
-header div#ocean div.blue-whale div.blue-whale-main div.blue-whale-eye {
-  position: absolute;
-  top: 70%;
-  right: 30%;
-  width: 1vmin;
-  height: 0.3vmin;
-  border-radius: 50%;
-  background-color: #6E798A;
-}
-header div#ocean div.blue-whale div.blue-whale-main div.gill-container {
-  background-color: transparent;
-  height: 3vmin;
-  width: 4vmin;
-  border-radius: 0 0 4vmin 0;
-  position: absolute;
-  left: 25%;
-  top: 70%;
-  transform-origin: 100% 100%;
-  overflow: hidden;
-}
-header div#ocean div.blue-whale div.blue-whale-main div.gill-container div.blue-whale-gill {
-  background-color: #9DA6B5;
-  height: 3vmin;
-  width: 5vmin;
-  border-radius: 0 0 4vmin 0;
-  position: absolute;
-  -webkit-animation: whale-gill 3s ease-in-out infinite;
-          animation: whale-gill 3s ease-in-out infinite;
-  transform-origin: 100% 100%;
-  transform: rotate(15deg);
-}
-header div#ocean div.blue-whale div.blue-whale-main div.blue-whale-color {
-  height: 2vmin;
-  width: 17vmin;
-  background-color: transparent;
-  position: absolute;
-  top: 4vmin;
-  left: 1vmin;
-  box-shadow: 2vmin -6vmin 6vmin #fff;
-  z-index: 1;
-}
-header div#ocean div.blue-whale div.blue-whale-main div.blue-whale-color-bottom {
-  height: 0.5vmin;
-  width: 17vmin;
-  background-color: transparent;
-  position: absolute;
-  top: 2.5vmin;
-  left: 1vmin;
-  box-shadow: -1vmin 4vmin 4vmin #090E15;
-  z-index: 1;
-}
-header div#ocean div.blue-whale div.blue-whale-backside {
-  height: 7vmin;
-  width: 12vmin;
-  background: #758AA7;
-  position: absolute;
-  left: -124%;
-  border-radius: 0% 0% 0% 100%;
-  overflow: hidden;
-  box-shadow: inset 0vmin -2vmin 3vmin #71819A;
-}
-header div#ocean div.blue-whale div.blue-whale-flipper {
-  left: -166%;
-  top: -36%;
-  position: absolute;
-  width: 6vmin;
-  height: 2.5vmin;
-  background-color: #687B96;
-  border-radius: 0px 20vmin 0px 20vmin;
-  transform-origin: 100% 100%;
-  transition: 0.4s ease-in-out;
-  transform: rotate(-73deg);
-  -webkit-animation: flipper-simple 3s ease-in-out infinite;
-          animation: flipper-simple 3s ease-in-out infinite;
-}
-header div#ocean div.blue-whale div.blue-whale-flipper:after {
-  content: "";
-  left: 0%;
-  top: 0%;
-  position: absolute;
-  width: 6vmin;
-  height: 2.5vmin;
-  background-color: #758AA7;
-  border-radius: 0px 20vmin 0px 20vmin;
-  transform-origin: 100% 100%;
-  transition: 0.4s ease-in-out;
-  transform: rotate(-20deg);
-}
-header div#ocean div.blue-whale div.bubbles {
+header div#ocean .bubbles {
   width: 100%;
   height: 100vh;
   -webkit-animation: bubbles 10s linear infinite;
           animation: bubbles 10s linear infinite;
 }
-header div#ocean div.blue-whale div.bubbles span {
+header div#ocean .bubbles span {
   width: 50px;
   height: 50px;
   border-radius: 100%;
   position: absolute;
   background-color: white;
   bottom: -10%;
-  -webkit-animation: bubbleWhite 10s ease-in-out infinite;
-          animation: bubbleWhite 10s ease-in-out infinite;
+  -webkit-animation: bubbleani 10s ease-in-out infinite;
+          animation: bubbleani 10s ease-in-out infinite;
 }
-header div#ocean div.blue-whale div.bubbles span:nth-child(1) {
+header div#ocean .bubbles span:nth-child(1) {
   width: 50px;
   height: 50px;
   opacity: 0.5;
@@ -849,7 +440,7 @@ header div#ocean div.blue-whale div.bubbles span:nth-child(1) {
           animation-duration: 10s;
   opacity: 0.2;
 }
-header div#ocean div.blue-whale div.bubbles span:nth-child(2) {
+header div#ocean .bubbles span:nth-child(2) {
   width: 30px;
   height: 30px;
   opacity: 0.5;
@@ -860,7 +451,7 @@ header div#ocean div.blue-whale div.bubbles span:nth-child(2) {
           animation-duration: 5s;
   opacity: 0.1;
 }
-header div#ocean div.blue-whale div.bubbles span:nth-child(3) {
+header div#ocean .bubbles span:nth-child(3) {
   width: 10px;
   height: 10px;
   opacity: 0.5;
@@ -871,7 +462,7 @@ header div#ocean div.blue-whale div.bubbles span:nth-child(3) {
           animation-duration: 20s;
   opacity: 0.3;
 }
-header div#ocean div.blue-whale div.bubbles span:nth-child(4) {
+header div#ocean .bubbles span:nth-child(4) {
   width: 35px;
   height: 35px;
   opacity: 0.5;
@@ -882,7 +473,7 @@ header div#ocean div.blue-whale div.bubbles span:nth-child(4) {
           animation-duration: 8s;
   opacity: 0.2;
 }
-header div#ocean div.blue-whale div.bubbles span:nth-child(5) {
+header div#ocean .bubbles span:nth-child(5) {
   width: 45px;
   height: 45px;
   opacity: 0.5;
@@ -893,7 +484,7 @@ header div#ocean div.blue-whale div.bubbles span:nth-child(5) {
           animation-duration: 15s;
   opacity: 0.1;
 }
-header div#ocean div.blue-whale div.bubbles span:nth-child(6) {
+header div#ocean .bubbles span:nth-child(6) {
   width: 40px;
   height: 40px;
   opacity: 0.5;
@@ -904,7 +495,7 @@ header div#ocean div.blue-whale div.bubbles span:nth-child(6) {
           animation-duration: 30s;
   opacity: 0.4;
 }
-header div#ocean div.blue-whale div.bubbles span:nth-child(7) {
+header div#ocean .bubbles span:nth-child(7) {
   width: 15px;
   height: 15px;
   opacity: 0.5;
@@ -913,7 +504,7 @@ header div#ocean div.blue-whale div.bubbles span:nth-child(7) {
           animation-duration: 25s;
   opacity: 0.3;
 }
-header div#ocean div.blue-whale div.bubbles span:nth-child(8) {
+header div#ocean .bubbles span:nth-child(8) {
   width: 20px;
   height: 20px;
   opacity: 0.5;
@@ -922,28 +513,146 @@ header div#ocean div.blue-whale div.bubbles span:nth-child(8) {
           animation-duration: 10s;
   opacity: 0.2;
 }
-header img {
+header div#ocean .bear {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 440px;
+  height: 470px;
+  margin-left: -220px;
+  border-radius: 220px 220px 0 0;
+  background: white;
+}
+header div#ocean .bear .ears-container {
+  position: absolute;
+  width: 530px;
+  height: 120px;
+  left: 50%;
+  top: 40px;
+  margin-left: -265px;
+}
+header div#ocean .bear .ears-container .ear {
+  float: left;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+}
+header div#ocean .bear .ears-container .ear:last-child {
+  float: right;
+}
+header div#ocean .bear #limit {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 240px;
+  height: 270px;
+  margin-left: -120px;
+}
+header div#ocean .bear #limit #face {
+  position: absolute;
+  left: 50%;
+  top: 6%;
+  width: 140px;
+  height: 230px;
+  margin-left: -70px;
+}
+header div#ocean .bear #limit #face .eyes-container {
+  position: relative;
+  left: 50%;
+  width: 82px;
+  height: 20px;
+  margin-left: -41px;
+}
+header div#ocean .bear #limit #face .eyes-container .eye {
+  float: left;
+  width: 20px;
+  height: 100%;
+  border-radius: 50%;
+  background: #000;
+}
+header div#ocean .bear #limit #face .eyes-container .eye:last-child {
+  float: right;
+}
+header div#ocean .bear #limit #face .phiz-container {
+  margin-top: 10px;
   width: 100%;
+  height: 200px;
+  border-radius: 100px;
+  background: rgb(222, 249, 254);
 }
-header #ocean:hover .blue-whale {
-  -webkit-animation: whale-move 15s linear infinite;
-          animation: whale-move 15s linear infinite;
+header div#ocean .bear #limit #face .phiz-container #nose {
+  position: relative;
+  left: 50%;
+  top: 6%;
+  width: 88px;
+  height: 88px;
+  margin-left: -44px;
+  border-radius: 50%;
+  background: #000;
 }
-header #ocean:hover .blue-whale-gill {
-  -webkit-animation: whale-gill1 3s ease-in-out infinite;
-          animation: whale-gill1 3s ease-in-out infinite;
+header div#ocean .bear #limit #face .phiz-container #nose .dot {
+  position: relative;
+  left: 16%;
+  top: 16%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
 }
-header #ocean:hover .blue-whale-main {
-  -webkit-animation: whale-swim 2s linear infinite;
-          animation: whale-swim 2s linear infinite;
+header div#ocean .bear #limit #face .phiz-container .mouth {
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  width: 24px;
+  height: 8px;
+  margin-left: -12px;
+  border-radius: 8px;
+  background: #000;
 }
-header #ocean:hover .blue-whale-backside {
-  -webkit-animation: whale-swim-back 2s linear infinite;
-          animation: whale-swim-back 2s linear infinite;
+header div#ocean #fish {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 74px;
+  margin-left: -10px;
+  margin-top: -37px;
 }
-header #ocean:hover .blue-whale-flipper {
-  -webkit-animation: flipper-move 2s linear infinite;
-          animation: flipper-move 2s linear infinite;
+header div#ocean #fish .head {
+  width: 100%;
+  height: 60px;
+  border-radius: 50%;
+  background: #adadad;
+}
+header div#ocean #fish .head .fish-eye {
+  position: relative;
+  left: 10px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+}
+header div#ocean #fish .fins {
+  position: absolute;
+  left: -7px;
+  top: 24px;
+  width: 22px;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 16px solid #adadad;
+}
+header div#ocean #fish .tail {
+  position: relative;
+  left: -6px;
+  top: -2px;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 16px solid #adadad;
 }
 header div.header-flex-box {
   display: flex;
@@ -1001,7 +710,7 @@ header div.header-flex-box div#slide-open span {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #fff;
+  background-color: white;
   border-radius: 4px;
 }
 header div.header-flex-box div#slide-open span:nth-of-type(1) {
@@ -1052,22 +761,27 @@ header div.header-flex-box nav ul#gnb li a {
   font-size: 18px;
   color: white;
 }
-header div#logo-big {
+header div#title {
   position: absolute;
-  top: 50%;
+  top: 15%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
-@media screen and (min-width: 1024px) {
-  header div#logo-big h1 {
+@media screen and (min-width: 768px) {
+  header div#title {
+    top: 20%;
+  }
+}
+@media screen and (min-width: 768px) {
+  header div#title h1 {
     font-size: 80px;
   }
 }
-header div#logo-big .individual-bubble {
+header div#title .individual-bubble {
   position: absolute;
   border-radius: 100%;
   bottom: 10px;
-  background-color: #fff;
+  background-color: white;
   z-index: 1;
 }
 
@@ -1095,7 +809,7 @@ main#bubble span:before {
   width: 100%;
   height: 100%;
   transform: scale(0.25) translate(-70%, -70%);
-  background: radial-gradient(#fff, transparent);
+  background: radial-gradient(white, transparent);
   border-radius: 50%;
 }
 main#bubble section {
@@ -1278,14 +992,21 @@ main#bubble section#skill div.skill-flex-box div.adobe div.skills {
   }
 }
 main#bubble section#skill .popup-overlay {
-  position: absolute;
-  top: 90px;
-  left: 25%;
-  width: 50%;
-  height: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  transform: translate(-50%, -50%);
   visibility: hidden;
   border: 3px solid #666666;
-  background: #ffffff;
+  background: white;
+}
+@media screen and (min-width: 1024px) {
+  main#bubble section#skill .popup-overlay {
+    width: 500px;
+    height: 400px;
+  }
 }
 main#bubble section#skill .popup-overlay.active {
   visibility: visible;
@@ -1300,6 +1021,16 @@ main#bubble section#skill .popup-content h2 {
 }
 main#bubble section#skill .popup-content p {
   font-size: 30px;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  main#bubble section#skill .popup-content p {
+    margin-bottom: 80px;
+  }
+}
+main#bubble section#skill .popup-content button {
+  padding: 10px;
+  font-size: 18px;
 }
 main#bubble section#skill .popup-content.active {
   visibility: visible;
@@ -1415,7 +1146,7 @@ footer {
   height: 100vh;
   margin: 0 auto;
   overflow: hidden;
-  background-color: #fff;
+  background-color: white;
 }
 footer div#footer-ocean {
   position: absolute;
@@ -1450,41 +1181,43 @@ footer div#footer-ocean svg#fish {
   top: 5em;
 }
 footer div#footer-ocean svg.fish {
-  position: absolute;
+  overflow: visible;
+}
+footer div#footer-ocean .fish {
   width: 235px;
   height: 104px;
-  overflow: visible;
   margin-left: -235px;
-  fill: #ffde4a;
-  -webkit-animation: swim 20s infinite linear;
-          animation: swim 20s infinite linear;
+  position: absolute;
+  -webkit-animation: swim 20s linear infinite;
+          animation: swim 20s linear infinite;
 }
-footer div#footer-ocean svg.fish svg #fish1,
-footer div#footer-ocean svg.fish svg #fish2,
-footer div#footer-ocean svg.fish svg #fish3,
-footer div#footer-ocean svg.fish svg #fish4,
-footer div#footer-ocean svg.fish svg #fish5,
-footer div#footer-ocean svg.fish svg #fish6 {
+footer div#footer-ocean svg #fish1,
+footer div#footer-ocean svg #fish2,
+footer div#footer-ocean svg #fish3,
+footer div#footer-ocean svg #fish4,
+footer div#footer-ocean svg #fish5,
+footer div#footer-ocean svg #fish6 {
+  fill: #ffde4a;
   -webkit-animation: bounce 2s infinite;
           animation: bounce 2s infinite;
 }
-footer div#footer-ocean svg.fish svg #fish2 {
+footer div#footer-ocean svg #fish2 {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
-footer div#footer-ocean svg.fish svg #fish3 {
+footer div#footer-ocean svg #fish3 {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-footer div#footer-ocean svg.fish svg #fish4 {
+footer div#footer-ocean svg #fish4 {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-footer div#footer-ocean svg.fish svg #fish5 {
+footer div#footer-ocean svg #fish5 {
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
-footer div#footer-ocean svg.fish svg #fish6 {
+footer div#footer-ocean svg #fish6 {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
@@ -1499,6 +1232,18 @@ footer div.footer-logo {
     display: none;
   }
 }
+footer div.footer-logo-pc {
+  display: none;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (min-width: 1024px) {
+  footer div.footer-logo-pc {
+    display: block;
+  }
+}
 footer div.footer-whale {
   display: none;
 }
@@ -1509,6 +1254,8 @@ footer div.footer-whale {
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-animation: swim 25s linear infinite;
+            animation: swim 25s linear infinite;
   }
 }
 footer div.phone-mail {
@@ -1574,7 +1321,7 @@ footer div#top div.top-bg span {
   left: 22px;
   width: 20px;
   height: 5px;
-  background-color: #fff;
+  background-color: white;
   border-radius: 5px;
 }
 footer div#top div.top-bg span:first-child {
