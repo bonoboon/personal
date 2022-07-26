@@ -1,0 +1,867 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Noto Sans", sans-serif;
+  color: #091b31;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 13px;
+}
+
+p {
+  font-size: 14px;
+}
+
+strong {
+  display: block;
+}
+
+span {
+  display: block;
+}
+
+address {
+  color: white;
+  font-size: 11px;
+  font-style: normal;
+}
+
+header,
+nav,
+main,
+article,
+aside,
+section,
+footer {
+  display: block;
+}
+
+.grid {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+@media screen and (min-width: 768px) {
+  header {
+    height: 130px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    height: 120px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  header div.header-flex-box div.logo {
+    width: 28%;
+    padding-left: 50px;
+  }
+}
+header div.header-flex-box div.logo h1 a img {
+  margin: 0 auto;
+  padding-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  header div.header-flex-box div.logo h1 a img {
+    padding-top: 25px;
+  }
+}
+header div.header-flex-box nav {
+  position: relative;
+  display: none;
+  width: 65%;
+  z-index: 1;
+}
+@media screen and (min-width: 1024px) {
+  header div.header-flex-box nav {
+    display: block;
+  }
+}
+header div.header-flex-box nav .gnb {
+  display: flex;
+  line-height: 120px;
+}
+header div.header-flex-box nav .gnb li {
+  position: relative;
+}
+header div.header-flex-box nav .gnb li a {
+  margin-right: 60px;
+  text-align: center;
+  color: #ff6a00;
+}
+header div.header-flex-box nav .gnb li a.navy {
+  color: navy;
+}
+header div.header-flex-box nav .gnb li a.navy:hover {
+  color: #ff6a00;
+  transition: 0.5s;
+}
+header div.header-flex-box nav .gnb li a.ko {
+  display: inline-block;
+  margin-right: 0;
+  padding-left: 25px;
+  color: #000018;
+  background: url(../images/ko.png) no-repeat left center;
+}
+header div.header-flex-box nav .gnb li a.ko:hover {
+  color: #ff6a00;
+  transition: 0.5s;
+}
+header div.header-flex-box nav .gnb li ul.sub-menu {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  z-index: 100;
+}
+header div.header-flex-box nav .gnb li ul.sub-menu li {
+  line-height: 30px;
+}
+header div.header-flex-box nav .gnb li ul.sub-menu li a {
+  width: 200px;
+  border-bottom: 1px solid #f26500;
+  padding: 5px 20px;
+  text-align: left;
+  font-size: 14px;
+  color: white;
+  background-color: #ff6a00;
+}
+header div.header-flex-box nav .gnb li ul.sub-menu li a:hover {
+  background-color: #f06400;
+}
+header div.header-flex-box nav .gnb li ul.sub-menu li a.en {
+  padding-left: 25px;
+  text-align: right;
+  background: #ff6a00 url(../images/en.png) no-repeat 20px 15px;
+}
+header div.header-flex-box nav .gnb li:first-child ul.sub-menu {
+  left: -31px;
+}
+header div.header-flex-box nav .gnb li:nth-child(2) ul.sub-menu {
+  left: -29px;
+}
+header div.header-flex-box nav .gnb li:nth-child(3) ul.sub-menu {
+  left: -53px;
+}
+header div.header-flex-box nav .gnb li:nth-child(4) ul.sub-menu {
+  left: -62px;
+}
+header div.header-flex-box nav .gnb li:nth-child(5) ul.sub-menu {
+  left: -75px;
+}
+header div.header-flex-box nav .gnb li:last-child ul.sub-menu {
+  left: -14px;
+}
+header div.header-flex-box nav .gnb li:last-child ul.sub-menu li a {
+  width: 110px;
+}
+header div.mobile-menu {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  header div.mobile-menu {
+    margin: 0 50px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header div.mobile-menu {
+    display: none;
+  }
+}
+header div.mobile-menu span {
+  width: 22px;
+  height: 1px;
+  margin-bottom: 6px;
+  background-color: #091b31;
+}
+header div.mobile-menu span:last-child {
+  margin-bottom: 0;
+}
+
+main {
+  position: relative;
+}
+main article.slide {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+main article.slide ul {
+  display: flex;
+  position: relative;
+  width: 700%;
+}
+main article.slide ul li {
+  width: 100%;
+}
+main article.slide ul li a img {
+  width: 100%;
+}
+main article.slide div.left-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  padding: 15px 0 0 12.5px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main article.slide div.left-arrow:hover {
+  background-color: black;
+}
+@media screen and (min-width: 768px) {
+  main article.slide div.left-arrow {
+    display: block;
+  }
+}
+main article.slide div.left-arrow span {
+  width: 12px;
+  height: 5px;
+  border-radius: 0 3px 3px 0;
+  background-color: white;
+}
+main article.slide div.left-arrow span:first-child {
+  transform: rotate(-50deg);
+}
+main article.slide div.left-arrow span:last-child {
+  top: 22px;
+  transform: rotate(50deg);
+}
+main article.slide div.right-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main article.slide div.right-arrow:hover {
+  background-color: black;
+}
+@media screen and (min-width: 768px) {
+  main article.slide div.right-arrow {
+    display: block;
+  }
+}
+main article.slide div.right-arrow span {
+  width: 12px;
+  height: 5px;
+  border-radius: 3px 0 0 3px;
+  background-color: white;
+}
+main article.slide div.right-arrow span:first-child {
+  transform: rotate(50deg);
+}
+main article.slide div.right-arrow span:last-child {
+  top: 22px;
+  transform: rotate(-50deg);
+}
+main article.slide div.circle {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(-50%);
+}
+@media screen and (min-width: 768px) {
+  main article.slide div.circle {
+    display: block;
+  }
+}
+main article.slide div.circle span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background-color: #999999;
+}
+main article.slide div.circle span:hover {
+  border: 3px solid #000;
+  background-color: white;
+}
+main section.program {
+  width: 100%;
+}
+main section.program div.grid div.program-tit {
+  padding-left: 20px;
+}
+main section.program div.grid div.program-tit h2 {
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 1024px) {
+  main section.program div.grid div.program-tit h2 {
+    font-size: 40px;
+  }
+}
+main section.program div.grid div.program-tit hr {
+  width: 19%;
+  border: 1px solid #ffdc3b;
+}
+@media screen and (min-width: 768px) {
+  main section.program div.grid div.program-tit hr {
+    width: 14%;
+  }
+}
+main section.program div.grid div.button {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+}
+@media screen and (min-width: 768px) {
+  main section.program div.grid div.button {
+    top: 0;
+  }
+}
+main section.program div.grid div.button a {
+  padding: 13px 35px;
+  border: 2px solid #2e96db;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #2e96db;
+  background-color: transparent;
+}
+main section.program div.grid div.button a:hover {
+  transition-duration: 0.3s;
+  color: white;
+  background-color: #2e96db;
+}
+main section.program div.grid div.program-flex-box {
+  width: 100%;
+  margin-top: 150px;
+}
+@media screen and (min-width: 768px) {
+  main section.program div.grid div.program-flex-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}
+main section.program div.grid div.program-flex-box div.show {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  main section.program div.grid div.program-flex-box div.show {
+    width: 29%;
+  }
+}
+main section.program div.grid div.program-flex-box div.show p {
+  color: #4a5868;
+  margin: 15px 0;
+  padding-right: 30px;
+}
+main section.program div.grid div.program-flex-box div.show a {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e51b00;
+}
+main section.program div.grid div.program-flex-box div.imgList {
+  width: 100%;
+  margin: 60px auto;
+  padding: 0 25px;
+}
+@media screen and (min-width: 768px) {
+  main section.program div.grid div.program-flex-box div.imgList {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main section.program div.grid div.program-flex-box div.imgList div {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  main section.program div.grid div.program-flex-box div.imgList div {
+    width: 32%;
+  }
+}
+main section.program div.grid div.program-flex-box div.imgList div img {
+  width: 100%;
+}
+main section.program div.grid div.program-flex-box div.imgList div div {
+  width: 100%;
+  margin: 25px 0;
+}
+main section.program div.grid div.program-flex-box div.imgList div div p {
+  margin-top: 7px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+main section.info {
+  background-color: #f7fafb;
+  padding: 80px 20px;
+}
+@media screen and (min-width: 768px) {
+  main section.info div.grid div.info-flex-box {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main section.info div.grid div.info-flex-box div.des {
+  border: 4px solid #ffdc3b;
+  padding: 30px 45px;
+}
+@media screen and (min-width: 768px) {
+  main section.info div.grid div.info-flex-box div.des {
+    width: 23%;
+    padding: 30px;
+  }
+}
+main section.info div.grid div.info-flex-box div.des h3 {
+  font-size: 21px;
+}
+@media screen and (min-width: 768px) {
+  main section.info div.grid div.info-flex-box div.des h3 {
+    font-size: 28px;
+  }
+}
+main section.info div.grid div.info-flex-box div.des p {
+  margin: 20px 0;
+  font-size: 13px;
+}
+@media screen and (min-width: 768px) {
+  main section.info div.grid div.info-flex-box div.des p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+main section.info div.grid div.info-flex-box div.des a {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 12px 22px;
+  font-size: 13px;
+  border: 2px solid #2e96db;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #2e96db;
+  background-color: transparent;
+}
+main section.info div.grid div.info-flex-box div.des a:hover {
+  transition-duration: 0.3s;
+  color: white;
+  background-color: #2e96db;
+}
+main section.info div.grid div.info-flex-box div.route-phone {
+  text-align: right;
+}
+@media screen and (min-width: 768px) {
+  main section.info div.grid div.info-flex-box div.route-phone {
+    width: 20%;
+  }
+}
+main section.info div.grid div.info-flex-box div.route-phone strong {
+  font-size: 14px;
+  margin: 40px 0 30px;
+}
+main section.info div.grid div.info-flex-box div.route-phone p {
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+main section.info div.grid div.info-flex-box div.route-phone p span {
+  display: inline-block;
+  color: #e51b00;
+}
+main section.info div.grid div.info-flex-box div.map {
+  margin-top: 35px;
+}
+@media screen and (min-width: 768px) {
+  main section.info div.grid div.info-flex-box div.map {
+    width: 47%;
+  }
+}
+main section.time-video-fb {
+  background-color: #f7fafb;
+  background-image: url(../images/wave_mobile.png);
+  background-size: cover;
+  padding: 110px 20px 180px;
+}
+@media screen and (min-width: 768px) {
+  main section.time-video-fb {
+    background-image: url(../images/wave_tablet.png);
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.time-video-fb {
+    background-image: url(../images/wave_pc.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  main section.time-video-fb div.grid div.time-flex-box {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main section.time-video-fb div.grid div.time-flex-box div.time {
+  margin-bottom: 20px;
+  padding: 40px 0;
+  text-align: center;
+  border: 4px solid white;
+}
+@media screen and (min-width: 768px) {
+  main section.time-video-fb div.grid div.time-flex-box div.time {
+    width: 24%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.time-video-fb div.grid div.time-flex-box div.time {
+    height: 200px;
+  }
+}
+main section.time-video-fb div.grid div.time-flex-box div.time strong {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  main section.time-video-fb div.grid div.time-flex-box div.time strong {
+    font-size: 18px;
+  }
+}
+main section.time-video-fb div.grid div.time-flex-box div.time span {
+  font-weight: 600;
+  font-size: 30px;
+  color: #e51b00;
+}
+@media screen and (min-width: 1024px) {
+  main section.time-video-fb div.grid div.time-flex-box div.time span {
+    font-size: 25px;
+  }
+}
+main section.time-video-fb div.grid div.time-flex-box div.time hr {
+  width: 50px;
+  margin: 15px auto 20px;
+  border: 1px solid white;
+}
+@media screen and (min-width: 1024px) {
+  main section.time-video-fb div.grid div.time-flex-box div.time hr {
+    font-size: 25px;
+  }
+}
+main section.time-video-fb div.grid div.time-flex-box div.video {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 360px;
+}
+@media screen and (min-width: 768px) {
+  main section.time-video-fb div.grid div.time-flex-box div.video {
+    width: 38%;
+    height: 325px;
+  }
+}
+main section.time-video-fb div.grid div.time-flex-box div.fb-page {
+  width: 100%;
+  height: 360px;
+}
+@media screen and (min-width: 768px) {
+  main section.time-video-fb div.grid div.time-flex-box div.fb-page {
+    width: 34%;
+    height: 325px;
+  }
+}
+main section.time-video-fb div.grid div.sns {
+  margin-top: 50px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main section.time-video-fb div.grid div.sns {
+    position: absolute;
+  }
+}
+main section.time-video-fb div.grid div.sns a {
+  display: inline-block;
+  padding: 18px;
+  background-color: white;
+}
+@media screen and (min-width: 768px) {
+  main section.time-video-fb div.grid div.sns a {
+    padding: 13px;
+  }
+}
+main section.time-video-fb div.grid div.sns a img {
+  width: 14px;
+}
+main section.time-video-fb div.grid div.sns .fb:hover {
+  background-color: #3a589b;
+  transition: 1s;
+}
+main section.time-video-fb div.grid div.sns .twitter:hover {
+  background-color: #32ccfe;
+  transition: 1s;
+}
+main section.time-video-fb div.grid div.sns .blog:hover {
+  background-color: #01c73c;
+  transition: 1s;
+}
+main section.time-video-fb div.grid div.sns .youtube:hover {
+  background-color: #ff3334;
+  transition: 1s;
+}
+main section.time-video-fb div.grid div.sns .insta:hover {
+  background-color: #b43792;
+  transition: 1s;
+}
+main section.slide-flogo {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 15px;
+  background-color: #f7fafb;
+}
+@media screen and (min-width: 768px) {
+  main section.slide-flogo {
+    height: 65px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.slide-flogo {
+    height: 90px;
+  }
+}
+main section.slide-flogo div.grid {
+  overflow: hidden;
+}
+main section.slide-flogo div.grid ul {
+  display: flex;
+  justify-content: space-between;
+  width: 400%;
+}
+@media screen and (min-width: 768px) {
+  main section.slide-flogo div.grid ul {
+    width: 200%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.slide-flogo div.grid ul {
+    width: 150%;
+  }
+}
+main section.slide-flogo div.grid ul li a img {
+  width: 120px;
+  margin: 0 50px;
+  padding-top: 8px;
+}
+@media screen and (min-width: 768px) {
+  main section.slide-flogo div.grid ul li a img {
+    width: 130px;
+    margin: 0 55px;
+    padding-top: 15px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.slide-flogo div.grid ul li a img {
+    padding-top: 25px;
+    margin: 0 60px;
+  }
+}
+main section.slide-flogo div.grid div.leftBtn {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+@media screen and (min-width: 768px) {
+  main section.slide-flogo div.grid div.leftBtn {
+    top: 25px;
+    left: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.slide-flogo div.grid div.leftBtn {
+    top: 35px;
+    left: 0;
+  }
+}
+main section.slide-flogo div.grid div.leftBtn span {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  border-radius: 10px;
+  background-color: #ccc;
+}
+main section.slide-flogo div.grid div.leftBtn span:first-child {
+  transform: rotate(-45deg);
+}
+main section.slide-flogo div.grid div.leftBtn span:last-child {
+  top: 12px;
+  transform: rotate(45deg);
+}
+main section.slide-flogo div.grid div.rightBtn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+@media screen and (min-width: 768px) {
+  main section.slide-flogo div.grid div.rightBtn {
+    top: 25px;
+    right: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.slide-flogo div.grid div.rightBtn {
+    top: 35px;
+    right: 15px;
+  }
+}
+main section.slide-flogo div.grid div.rightBtn span {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  border-radius: 10px;
+  background-color: #ccc;
+}
+main section.slide-flogo div.grid div.rightBtn span:first-child {
+  transform: rotate(45deg);
+}
+main section.slide-flogo div.grid div.rightBtn span:last-child {
+  top: 12px;
+  transform: rotate(-45deg);
+}
+
+footer {
+  width: 100%;
+  height: 325px;
+  text-align: center;
+  background-color: #214169;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    height: 220px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer div.grid div.footer-flex-box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer div.grid div.footer-flex-box div.flogo {
+    width: 30%;
+  }
+}
+footer div.grid div.footer-flex-box div.flogo a img {
+  margin: 0 auto;
+  padding: 20px 0;
+}
+@media screen and (min-width: 768px) {
+  footer div.grid div.footer-flex-box div.flogo a img {
+    margin: 0;
+    padding: 25px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer div.grid div.footer-flex-box div.address-info-menu {
+    width: 70%;
+    padding-top: 25px;
+  }
+}
+footer div.grid div.footer-flex-box div.address-info-menu div.address {
+  margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  footer div.grid div.footer-flex-box div.address-info-menu div.address address {
+    font-size: 14px;
+  }
+}
+footer div.grid div.footer-flex-box div.address-info-menu div.footer-info p {
+  margin-top: 2px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  footer div.grid div.footer-flex-box div.address-info-menu div.footer-info p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+footer div.grid div.footer-flex-box div.address-info-menu div.footer-menu {
+  width: 100%;
+  margin-bottom: 40px;
+}
+footer div.grid div.footer-flex-box div.address-info-menu div.footer-menu a {
+  display: inline-block;
+  text-align: center;
+  font-size: 11px;
+  color: #c9f2ff;
+}
+footer div.grid div.footer-flex-box div.address-info-menu div.footer-menu a:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+@media screen and (min-width: 768px) {
+  footer div.grid div.footer-flex-box div.address-info-menu div.footer-menu a {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+footer hr {
+  width: 100%;
+  padding: 0;
+  border: 1px solid #385478;
+}
+footer div.copyright {
+  margin-top: 20px;
+}
+footer div.copyright p {
+  font-size: 13px;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  footer div.copyright p {
+    font-size: 14px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=index.css.map */

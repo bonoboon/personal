@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 * {
   margin: 0;
   padding: 0;
@@ -373,6 +374,11 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.stop-scroll {
+  height: 100%;
+  overflow: hidden;
 }
 
 header {
@@ -1015,6 +1021,9 @@ main#bubble section#skill .popup-overlay.active {
 main#bubble section#skill .popup-content {
   visibility: hidden;
 }
+main#bubble section#skill .popup-content.active {
+  visibility: visible;
+}
 main#bubble section#skill .popup-content h2 {
   font-size: 36px;
   background: none;
@@ -1032,26 +1041,29 @@ main#bubble section#skill .popup-content button {
   padding: 10px;
   font-size: 18px;
 }
-main#bubble section#skill .popup-content.active {
-  visibility: visible;
-}
 @media screen and (min-width: 1024px) {
   main#bubble section#portfolio {
     height: 100vh;
   }
 }
-main#bubble section#portfolio a {
+main#bubble section#portfolio a,
+main#bubble section#portfolio .button {
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 30px;
   padding: 10px 20px;
   border-radius: 50px;
   color: white;
   background-color: #62adff;
 }
-main#bubble section#portfolio a:hover {
+main#bubble section#portfolio a:hover,
+main#bubble section#portfolio .button:hover {
   font-weight: 600;
   color: #62adff;
   background-color: #f2f2f2;
+}
+main#bubble section#portfolio .button {
+  cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
   main#bubble section#portfolio div.portfolio-flex {
@@ -1081,7 +1093,7 @@ main#bubble section#portfolio div.portfolio-flex div.portfolio div.portfolio-img
   display: flex;
   position: relative;
   width: 1000px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1024px) {
   main#bubble section#portfolio div.portfolio-flex div.portfolio div.portfolio-img ul#portfolio-slide-m {
@@ -1119,25 +1131,305 @@ main#bubble section#portfolio div.portfolio-flex div.portfolio div.portfolio-des
     width: 40%;
   }
 }
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transform: translate(-50%, -50%);
+  background: #f9f9f9;
+  z-index: 100;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal.active {
+  display: block;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  background: #fff;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .upTitle {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  background: none;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container {
+  position: relative;
+  margin: 0 auto;
+  transform: scale(0.6);
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor:before,
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor:after,
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .laptop:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor:before,
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .laptop:before {
+  top: -10px;
+  margin: -3px 0 0 -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #a5adbd;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .base:before,
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .base:after,
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .grey-shadow:before,
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .grey-shadow:after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .foot.top:before,
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .foot.top:after,
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .foot.bottom:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .screen {
+  position: relative;
+  width: 460px;
+  height: 280px;
+  border: 20px solid #474e5d;
+  border-radius: 10px;
+  background: url(../images/main_pc.png) center;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .screen:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  bottom: -10px;
+  margin: 0 0 -4px -4px;
+  background: #e8ebf0;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base {
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  bottom: -70px;
+  left: 50%;
+  margin-left: -45px;
+  background: #e8ebf0;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base:before {
+  border-left: 13px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 50px solid #e8ebf0;
+  left: -13px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base:after {
+  border-right: 13px solid transparent;
+  border-left: 0px solid transparent;
+  border-bottom: 50px solid #e8ebf0;
+  right: -13px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base div {
+  position: absolute;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base .grey-shadow {
+  width: 90px;
+  height: 12px;
+  background: #d8dbe1;
+  top: 0;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base .grey-shadow:before {
+  border-left: 3px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 12px solid #d8dbe1;
+  left: -3px;
+  z-index: 2;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base .grey-shadow:after {
+  border-right: 3px solid transparent;
+  border-left: 0px solid transparent;
+  border-bottom: 12px solid #d8dbe1;
+  right: -3px;
+  z-index: 2;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base .foot {
+  background: #e8ebf0;
+  z-index: 1;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base .foot.top {
+  width: 116px;
+  height: 5px;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -58px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base .foot.top:before {
+  border-left: 16px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 5px solid #e8ebf0;
+  left: -16px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base .foot.top:after {
+  border-right: 16px solid transparent;
+  border-left: 0px solid transparent;
+  border-bottom: 5px solid #e8ebf0;
+  right: -16px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .monitor .base .foot.bottom {
+  width: 150px;
+  height: 5px;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -75px;
+  z-index: 999;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .laptop {
+  position: absolute;
+  top: 200px;
+  right: -100px;
+  width: 235px;
+  height: 155px;
+  background: url(../images/main_laptop.png) no-repeat center;
+  border: 12px solid #e8ebf0;
+  border-radius: 10px 10px 0 0;
+}
+@media screen and (min-width: 1024px) {
+  main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .laptop {
+    right: 0;
+  }
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .laptop:before {
+  top: -6px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .laptop .btm {
+  position: absolute;
+  width: 296px;
+  height: 7px;
+  bottom: -19px;
+  left: 50%;
+  margin-left: -148px;
+  border-radius: 0 0 20px 20px;
+  background: #f4f5f7;
+  z-index: 1;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .laptop .btm:before {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 3px;
+  left: 50%;
+  top: 0;
+  margin-left: -21px;
+  border-radius: 0 0 5px 5px;
+  background: #d8dbe1;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .phone {
+  width: 70px;
+  height: 140px;
+  position: absolute;
+  bottom: -90px;
+  left: -30px;
+  border-radius: 5px;
+  background: #000;
+  border: 25px solid #2f343e;
+  border-left: 5px solid #2f343e;
+  border-right: 5px solid #2f343e;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .phone:before, main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .phone:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  background: #474e5d;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .phone:before {
+  background: #474e5d;
+  width: 20px;
+  height: 4px;
+  margin-left: -10px;
+  top: -12px;
+  border-radius: 2px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .phone:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  bottom: -18px;
+  margin-left: -5px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .container .phone .phone-screen {
+  width: 60px;
+  height: 90px;
+  position: relative;
+  overflow: hidden;
+  background: url(../images/main_mobile.png);
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp h3 {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 36px;
+  border-bottom: 5px solid #a6908f;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp p {
+  padding: 30px;
+  line-height: 40px;
+  font-size: 24px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp p.font-name {
+  padding: 0 30px;
+  font-size: 36px;
+  font-family: pretentard;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp p.font-des {
+  padding: 0 30px;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .color-flex-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .color-flex-box .colors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .color-flex-box .colors:first-child div {
+  background-color: #f9f9f9;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .color-flex-box .colors:nth-child(2) div {
+  background-color: #a6908f;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .color-flex-box .colors:last-child div {
+  background-color: #a7a7a7;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .color-flex-box .colors div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+main#bubble section#portfolio div.portfolio-flex div.portfolio .modal .modalUp .closeBtn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 80px;
+  height: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 3px;
+  background: #ccc;
+}
 main#bubble section#portfolio div.portfolio-flex div#clone div.portfolio-img {
   width: 600px;
 }
 main#bubble section#portfolio div.portfolio-flex div#clone div.portfolio-img img {
   width: 100%;
-}
-main#bubble section#video {
-  width: 100%;
-  text-align: center;
-}
-@media screen and (min-width: 1024px) {
-  main#bubble section#video {
-    height: 100vh;
-  }
-}
-main#bubble section#video video {
-  width: 100%;
-  margin: 0 auto 35px;
-  background-color: #f6ffeb;
 }
 
 footer {
@@ -1296,17 +1588,14 @@ footer div.phone-mail div p span {
   }
 }
 footer div#top {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
   opacity: 0;
-}
-@media screen and (min-width: 1024px) {
-  footer div#top {
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    z-index: 100;
-    width: 50px;
-    height: 50px;
-  }
+  cursor: pointer;
 }
 footer div#top div.top-bg {
   position: relative;

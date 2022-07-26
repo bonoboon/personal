@@ -203,11 +203,24 @@ $(function() {
         $(".popup-overlay, .popup-content").addClass("active");
         $(".popup-title").text($(this).children(".hidden-title").text());
         $(".popup-text").text($(this).children(".hidden-text").text());
+        $('body').addClass("stop-scroll");
     });
       
     $(".close, .popup-overlay").on("click", function() {
         $(".popup-overlay, .popup-content").removeClass("active");
+        $('body').removeClass("stop-scroll");
     });
+
+    // 디자인 가이드
+    $(function() {
+        $('.button').click(function() {
+            $(this).parent().next(".modal").addClass("active");
+            $('body').addClass("stop-scroll");
+        });
+
+        $('.closeBtn').click(function() {
+            $(this).parent().parent().removeClass("active");
+            $('body').removeClass("stop-scroll");
+        });
+    })
 });
-
-

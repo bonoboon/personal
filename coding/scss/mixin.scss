@@ -1,0 +1,32 @@
+@mixin responsive($break) {
+    @if $break == mobile-screens {
+        @media screen and (min-width:$break-mobile) {
+            @content;
+        }
+    }
+
+    @else if $break == tablet-screens {
+        @media screen and (min-width:$break-tablet) {
+            @content;
+        }
+    }
+
+    @else if $break == pc-screens {
+        @media screen and (min-width:$break-pc) {
+            @content;
+        }
+    }
+}
+
+@mixin button-style() {
+    border: 2px solid $color-button;
+    border-radius: 3px;
+    font-size: 14px;
+    color: $color-button;
+    background-color: transparent;
+    &:hover {
+        transition-duration: 0.3s;
+        color: white;
+        background-color: $color-button;
+    }
+}
